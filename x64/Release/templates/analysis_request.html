@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos de Análise</title>
+    <link href='static/css/analysis_request.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="request-container">
+        <h1 id="request-title">Pedidos de Análise</h1>
+        <table>
+            <tr>
+                <td><input type="date" id="data-do-pedido" name="data-do-pedido" placeholder="Data do Pedido"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="piloto-solicitante" name="piloto-solicitante" placeholder="Piloto Solicitante"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="piloto-acusado">Piloto Acusado:</label>
+		                <select id="piloto-acusado" name="piloto-acusado" placeholder="Piloto Acusado:">
+                        <!--START1-->
+                        <option value="piloto_acusado">Piloto Acusado</option>
+                        <!--STOP-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="season">Temporada:</label>
+                    <input type="text" id="season" name="temporada" placeholder="Temporada" value="T21">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="simulador">Simulador:</label>
+		                <select id="simulador" name="simulador" placeholder="Simulador">
+                        <option value="Assetto Corsa Competizione">Assetto Corsa Competizione</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="etapa">Etapa:</label>
+                    <select id="etapa" name="etapa">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="bateria">Bateria:</label>
+                    <select id="bateria" name="bateria">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+		            <label for="minuto-do-incidente">Minuto do incidente (Hora:Min:Seg)</label>
+                    <input type="time" id="minuto-do-incidente" name="minuto-do-incidente" placeholder="Minuto do Incidente" min="00:00" max="120:00" step="1">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="url" id="link-da-gravacao" name="link-da-gravacao" placeholder="Link da Gravação ou arquivo de replay"></td>
+            </tr>
+            <tr>
+                <td><textarea id="contexto" name="contexto" rows="4" cols="50" placeholder="Contexto"></textarea></td>
+            </tr>
+        </table>
+        <button id="enviar-button">Enviar Pedido</button>
+    </div>
+	<script src="static/js/analysis_request.js"></script>
+</body>
+</html>

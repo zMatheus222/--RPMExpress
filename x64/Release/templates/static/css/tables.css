@@ -1,0 +1,151 @@
+/* Estilo geral para o corpo da página */
+body {
+    font-family: Poppins;
+    background-color: #202020;
+}
+
+/* Estilo para o contêiner da tabela */
+.table-container {
+    background-color:#171717;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    border: 1px solid rgb(78, 78, 78);
+}
+
+/* Estilo para o cabeçalho das tabelas */
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Estilo para as abas (botoes)
+#buttons-container {
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+#buttons-container button {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+*/
+
+/* Estilo para as tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.Pos, .Num, .Tag, .Car{
+    width: 10px;
+}
+
+.Pts, .Cat, .upd{
+    width: 10px;
+}
+
+.Pos, .upd{
+    max-width: 5px;
+}
+
+.Pil, .Eqp{
+    width: 12px;
+}
+
+
+.Pun{
+    width: 7px;
+}
+
+
+/* Estilo para a primeira linha da tabela (cabeçalho) */
+tr:first-child th {
+    background-color: #2b23c4;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    height: 40px;
+}
+
+/* Estilo para as células das tabelas */
+td {
+    padding-block: 10px;
+    border-bottom: 1px solid #ffffff;
+    color: white;
+    font-size: small;
+}
+
+/* Estilo para as linhas ímpares das tabelas */
+tbody tr:nth-child(odd) {
+    background-color: rgb(39, 39, 39);
+}
+
+tbody td {
+    text-align: left;
+}
+
+/* Estilo para as células de Position nas tabelas */
+tbody td {
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Estilo para tabelas ocultas */
+table[style='display: none;'] {
+    display: none;
+}
+.table_title{
+    text-align: left;
+    font-size: 30px;
+}
+
+.btn_etapa:hover, .sideside:hover{
+    background-color: #3e36d6;
+}
+
+.btn_etapa{
+    background-color: #2b23c4;
+    color:white;
+    border-radius: 2px;
+    width: 10%;
+    height: 32px;
+    text-align: center;
+    font-size: 10px;
+    font-family: Poppins;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.TG-Long {
+    width: 100px;
+}
+
+.TG-Mid {
+    width: 50px;
+}
+
+.TG-Short {
+    width: 30px;
+}
+
+.tabela_etapa { display: none; } /* Inicialmente oculta */
+
+.tabela_etapa th, .tabela_etapa td { border: 1px solid #505050; }
+
+.tabela_etapa td { border-bottom: 1px solid #505050; }
+
+.driver_class_PRO { color: white; }
+.driver_class_SILVER { color: silver; }
+.driver_class_BRONZE { color: red; }
+
+.driver_punishment_red { color: red; }
+
+.driver_upd_green { color: green; }
+.driver_upd_yellow { color: yellow; }
+.driver_upd_red { color: red; }

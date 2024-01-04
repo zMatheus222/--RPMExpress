@@ -1,0 +1,119 @@
+/* Estilo geral para o corpo da página */
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #303030;
+}
+
+/* Estilo para o contêiner da tabela */
+.table-container {
+    background-color:#202020;
+    max-width: 70%;
+    margin: 3% auto;
+    padding: 2%;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 12px;
+}
+
+/* Estilo para o cabeçalho das tabelas */
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.standard-param{
+    color: white;
+}
+
+/* Estilo para as abas (botoes) */
+#buttons-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#buttons-container button {
+    margin: 0 5px;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Estilo para as tabelas */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+/* Estilo para as células do cabeçalho das tabelas */
+th {
+    padding: 5px;
+    text-align: left;
+    font-weight: normal;
+    color:white;
+}
+/* Estilo para a primeira linha da tabela (cabeçalho) */
+tr:first-child th {
+    background-color: #2b23c4;
+    color: white;
+    font-weight:600 ;
+    text-align: center;
+}
+
+/* Estilo para as células das tabelas */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+    color: white;
+}
+
+/* Estilo para as linhas ímpares das tabelas */
+tbody tr:nth-child(odd) {
+    background-color: rgb(39, 39, 39);
+}
+
+/* Estilo para as células das linhas ímpares das tabelas */
+tbody td {
+    text-align: left;
+}
+
+/* Estilo para as células de Position nas tabelas */
+tbody td {
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Estilo para tabelas ocultas */
+table[style='display: none;'] {
+    display: none;
+}
+.table_title{
+    text-align: left;
+    font-size: 150%;
+}
+.btn_etapa:hover, .sideside:hover{
+    background-color: #3e36d6;
+}
+.btn_etapa{
+    background-color: #2b23c4;
+    color:white;
+    border-radius: 22px;
+    width: 13%;
+    height: 32px;
+    text-align: center;
+    font-size: 63%;
+    font-family: Poppins;
+    cursor: pointer;
+}
+.sideside{
+    flex: 1;
+    border: 0px;
+    width: auto;
+    height: 35px;
+    background-color: #2b23c4;
+    color: #ffffff;
+    font-family: Poppins;
+    cursor: pointer;
+    display:inline-block;
+}

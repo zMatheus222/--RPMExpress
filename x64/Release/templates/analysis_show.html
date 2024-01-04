@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet'>
+    <link href='static/css/analysis_show.css' rel='stylesheet'>
+    <title>Visualização de Pedidos de Análise</title>
+</head>
+
+<body>
+    <h1>Lista de Pedidos de Análise</h1>
+    <!--START1-->
+    <div class='season-selector'>
+        <button onclick='toggleSeasons(21)'>Selecione a Temporada</button>
+        <div class='season-dropdown' id='seasonDropdown'>
+            <a href='#' onclick='toggleSeasons("T21")'>T21</a>
+            <a href='#' onclick='toggleSeasons("T22")'>T22</a>
+            <a href='#' onclick='toggleSeasons("T23")'>T23</a>
+            <!-- Adicione mais temporadas conforme necessário -->
+        </div>
+        <button id="btn-apply-punishiment" class="btn-apply-punishiment">Aplicar punição</button>
+    </div>
+    <table class="season_table" id='T21'>
+        <tr>
+            <th>Id</th>
+            <th>Data do Pedido</th>
+            <th>Piloto Solicitante</th>
+            <th>Piloto Acusado</th>
+            <th>Simulador</th>
+            <th>Etapa</th>
+            <th>Bateria</th>
+            <th>Minuto</th>
+            <th>Link Gravacao</th>
+            <th>Status</th>
+        </tr>
+        
+        <tr class='main-row'>
+            <td>1</td>
+            <td>01-09-2023</td>
+            <td>Luan Costa</td>
+            <td>Matheus Samuel</td>
+            <td>Assetto Corsa Competizione</td>
+            <td id="etapa">1</td>
+            <td id="bateria">1</td>
+            <td>12:33</td>
+            <td><button class="btn_record" onclick="window.open('https://www.youtube.com', '_blank')">Acessar</button></td>
+            <td><button class='btn-amarelo'>Pendente</button></td>
+        </tr>
+        <tr class='details-row'>
+            <td>
+                <div class='details-container'>
+                    <!-- Seus detalhes adicionais -->
+                    <div><strong>Contexto: </strong>Piloto me bateu</div>
+                    <div><strong>Situação Principal: </strong>Toque na traseira</div>
+                    <div><strong>Situação Intrínseca: </strong>O fazendo rodar</div>
+                    <div><strong>Punicao de Tempo: </strong>+10 segundos</div>
+                    <div><strong>Punicao de Pontos: </strong>-10 pontos</div>
+                    <div><strong>Punicoes Adicionais: </strong>DSQ</div>
+                </div>
+            </td>
+        </tr>
+
+        <tr class='main-row'>
+            <td>1</td>
+            <td>01-09-2023</td>
+            <td>Ramires Fischer</td>
+            <td>Luana Costa</td>
+            <td>Assetto Corsa Competizione</td>
+            <td>1</td>
+            <td>1</td>
+            <td>12:33</td>
+            <td><button class="btn_record" onclick="window.open('https://www.youtube.com', '_blank')">Acessar</button></td>
+            <td><button class='btn-verde'>Resolvido</button></td>
+        </tr>
+        <tr class='details-row'>
+            <td>
+                <div class='details-container'>
+                    <!-- Seus detalhes adicionais -->
+                    <div><strong>Contexto: </strong>Piloto me bateu</div>
+                    <div><strong>Situação Principal: </strong>Toque na traseira</div>
+                    <div><strong>Situação Intrínseca: </strong>O fazendo rodar</div>
+                    <div><strong>Punicao de Tempo: </strong>+10 segundos</div>
+                    <div><strong>Punicao de Pontos: </strong>-10 pontos</div>
+                    <div><strong>Punicoes Adicionais: </strong>DSQ</div>
+                </div>
+            </td>
+        </tr>
+
+        <tr class='main-row'>
+            <td>38</td>
+            <td>2023-12-02</td>
+            <td id="p_solicitante">Matheus Samuel</td>
+            <td id="p_acusado">PsyWen</td>
+            <td>Assetto Corsa Competizione</td>
+            <td id="etapa">4</td>
+            <td id="bateria">2</td>
+            <td id="momento">00:24:00</td>
+            <td><button class='btn_record' onclick="window.open('https://www.youtube.com', '_blank')">Acessar</button></td>
+            <td id="a_status"><button class='btn-verde'>Resolvida</button></td>
+        </tr>
+
+        <tr class='details-row'>
+            <td colspan='9'>
+                <div class='details-container'>
+                    <!-- Seus detalhes adicionais -->
+                    <div><strong>Contexto: </strong>Curte correr com carro de animal</div>
+                    <div><strong>Situacao Principal: </strong>Toque na traseira que provoque a perda da tracao no oponente</div>
+                    <div><strong>Situacao Intrinseca: </strong>Causou strike evitavel (o piloto poderia ter evitado)</div>
+                    <div><strong>Punicao de Tempo: </strong>0</div>
+                    <div><strong>Punicao de Pontos: </strong>50</div>
+                    <div><strong>Punicoes Adicionais: </strong>Nenhuma</div>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+    <table class="season_table" id="T22">
+        <tr>
+            <th>Id</th>
+            <th>Data do Pedido</th>
+            <th>Piloto Solicitante</th>
+            <th>Piloto Acusado</th>
+            <th>Simulador</th>
+            <th>Etapa</th>
+            <th>Bateria</th>
+            <th>Minuto</th>
+            <th>Link Gravacao</th>
+            <th>Status</th>
+        </tr>
+        
+        <tr class='main-row'>
+            <td>1</td>
+            <td>01-09-2023</td>
+            <td>Luan Costa</td>
+            <td>Matheus Samuel</td>
+            <td>Assetto Corsa Competizione</td>
+            <td>1</td>
+            <td>1</td>
+            <td>12:33</td>
+            <td><button class="btn_record" onclick="window.open('https://www.youtube.com', '_blank')">Acessar</button></td>
+            <td><button class='btn-verde'>Resolvido</button></td>
+        </tr>
+        <tr class='details-row'>
+            <td>
+                <div class='details-container'>
+                    <!-- Seus detalhes adicionais -->
+                    <div><strong>Contexto: </strong>Piloto me bateu</div>
+                    <div><strong>Situação Principal: </strong>Toque na traseira</div>
+                    <div><strong>Situação Intrínseca: </strong>O fazendo rodar</div>
+                    <div><strong>Punicao de Tempo: </strong>+10 segundos</div>
+                    <div><strong>Punicao de Pontos: </strong>-10 pontos</div>
+                    <div><strong>Punicoes Adicionais: </strong>DSQ</div>
+                </div>
+            </td>
+        </tr>
+
+        <tr class='main-row'>
+            <td>1</td>
+            <td>01-09-2023</td>
+            <td>Luan Costa</td>
+            <td>Matheus Samuel</td>
+            <td>Assetto Corsa Competizione</td>
+            <td>1</td>
+            <td>1</td>
+            <td>12:33</td>
+            <td><button class="btn_record" onclick="window.open('https://www.youtube.com', '_blank')">Acessar</button></td>
+            <td><button class='btn-verde'>Resolvido</button></td>
+        </tr>
+        <tr class='details-row'>
+            <td>
+                <div class='details-container'>
+                    <!-- Seus detalhes adicionais -->
+                    <div><strong>Contexto: </strong>Piloto me bateu</div>
+                    <div><strong>Situação Principal: </strong>Toque na traseira</div>
+                    <div><strong>Situação Intrínseca: </strong>O fazendo rodar</div>
+                    <div><strong>Punicao de Tempo: </strong>+10 segundos</div>
+                    <div><strong>Punicao de Pontos: </strong>-10 pontos</div>
+                    <div><strong>Punicoes Adicionais: </strong>DSQ</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!--STOP-->
+    <!-- Modal -->
+    <div id='myModal' class='modal'>
+        <div class='modal-content'>
+            <span class='close' onclick='closeModal()'>&times;</span>
+            <h3>Resolver / Alterar Analise</h3>
+            <!-- Campos de seleção -->
+            <label for='campo0'>Piloto a ser punido:</label>
+            <select id='campo0'>
+                <option value='1'>1-Luan Costa</option>
+                <option value='2'>2-Matheus Samuel</option>
+                <option value='3'>3-Ramires Fischer</option>
+                <option value='4'>4-Luana Costa</option>
+            </select>
+            <label for='campo1'>Situação Principal:</label>
+            <select id='campo1'>
+                <option value='1'>1-Toque na traseira</option>
+                <option value='2'>2-Nao deixar espaço minimo de um carro</option>
+                <option value='3'>3-Referente a batidas laterais</option>
+                <option value='4'>4-Permanecer em pista com o carro danificado</option>
+                <option value='5'>5-Retornar a pista de forma perigosa</option>
+                <option value='6'>6-Passou dos limites de pista</option>
+            </select>
+            <label for='campo2'>Situação Intrínseca:</label>
+            <select id='campo2'>
+                <option value='1'>1-Nao ganhou vantagem</option>
+                <option value='2'>2-Nao causou nenhum prejuizo como danos consideraveis ao veiculo do oponente</option>
+                <option value='3'>3-Ganhou vantagem</option>
+                <option value='4'>4-Causou perda consideravel de tempo (0.7s ou mais)</option>
+                <option value='5'>5-Oponente rodou sem sofrer danos consideraveis ou perder posicoes</option>
+                <option value='6'>6-Causou perda de posicoes, mas o oponente nao rodou ou sofreu danos consideraveis</option>
+                <option value='7'>7-Oponente rodou sem sofrer danos consideraveis, mas houve perda de posicoes</option>
+                <option value='8'>8-Oponente rodou e sofreu danos consideraveis no veiculo</option>
+                <option value='9'>9-Oponente rodou e sofreu danos graves no veiculo</option>
+                <option value='10'>10-Causou strike inevitavel</option>
+                <option value='11'>11-Causou strike evitavel</option>
+                <option value='12'>12-Causado por BUG's</option>
+            </select>
+            <label>
+                <input type='checkbox' name='reincident' class='checkbox' >Reincidência
+                
+            </label>
+
+            <label for='resume_field' class="resume_field_h">Resumo:</label>
+            <div class="resume_container"><input type='text' id='resume_field' name='resume_field' placeholder='Digite o resumo do lance:'></div>
+            <!-- Seus detalhes adicionais -->
+            <div id='additional-details'></div>
+            <button id='enviarBtn' class='btn_modal'>Enviar</button>
+        </div>
+    </div>
+    <!-- Modal aplicar punição -->
+    <div id='myModal_aplicar_punicao' class='modal'>
+
+        <div class='modal-content'>
+            <span class='close' onclick='closeModal()'>&times;</span>
+            <h3>Aplicar Punição</h3>
+
+            <!-- Campos de seleção -->
+            <label for='campo_temp'>Temporada/Etapa/Bateria</label>
+            <select id='campo_temp'>
+                <!--START2-->
+                <option value='1'>T21E1R</option>
+                <option value='2'>T21E2R1</option>
+                <option value='3'>T21E2R2</option>
+                <option value='4'>T21E3R</option>
+                <!--STOP-->
+            </select>
+
+            <label for='campo0_aplicar_punicao'>Piloto a ser punido:</label>
+            <select id='campo0_aplicar_punicao'>
+                <!--START3-->
+                <option value='1'>1-Luan Costa</option>
+                <option value='2'>2-Matheus Samuel</option>
+                <option value='3'>3-Ramires Fischer</option>
+                <option value='4'>4-Luana Costa</option>
+                <!--STOP-->
+            </select>
+            <label for='campo1_aplicar_punicao'>Situação Principal:</label>
+            <select id='campo1_aplicar_punicao'>
+                <option value='1'>1-Toque na traseira</option>
+                <option value='2'>2-Nao deixar espaço minimo de um carro</option>
+                <option value='3'>3-Referente a batidas laterais</option>
+                <option value='4'>4-Permanecer em pista com o carro danificado</option>
+                <option value='5'>5-Retornar a pista de forma perigosa</option>
+                <option value='6'>6-Passou dos limites de pista</option>
+            </select>
+            <label for='campo2_aplicar_punicao'>Situação Intrínseca:</label>
+            <select id='campo2_aplicar_punicao'>
+                <option value='1'>1-Nao ganhou vantagem</option>
+                <option value='2'>2-Nao causou nenhum prejuizo como danos consideraveis ao veiculo do oponente</option>
+                <option value='3'>3-Ganhou vantagem</option>
+                <option value='4'>4-Causou perda consideravel de tempo (0.7s ou mais)</option>
+                <option value='5'>5-Oponente rodou sem sofrer danos consideraveis ou perder posicoes</option>
+                <option value='6'>6-Causou perda de posicoes, mas o oponente nao rodou ou sofreu danos consideraveis</option>
+                <option value='7'>7-Oponente rodou sem sofrer danos consideraveis, mas houve perda de posicoes</option>
+                <option value='8'>8-Oponente rodou e sofreu danos consideraveis no veiculo</option>
+                <option value='9'>9-Oponente rodou e sofreu danos graves no veiculo</option>
+                <option value='10'>10-Causou strike inevitavel</option>
+                <option value='11'>11-Causou strike evitavel</option>
+                <option value='12'>12-Causado por BUG's</option>
+            </select>
+            <label>
+                <input type='checkbox' name='reincident' class='checkbox' >Reincidência
+                
+            </label>
+            <button id='enviarBtn_aplicar_punicao' class='btn_modal'>Enviar</button>
+        </div>
+
+    </div>
+    <script src="static/js/analysis_show.js"></script>
+</body>
+</html>

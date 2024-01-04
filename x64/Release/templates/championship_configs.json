@@ -1,0 +1,153 @@
+{
+	
+	"ChampMain": {
+		"Season": "T21",
+		"AnalysisTable": "GeneralAnalysis",
+		"ScoreSchema": "T21"
+	},
+	
+	"PunishmentOptions": {
+		
+		"Alters": [
+			"Reincidencia1x",
+			"Reincidencia3x",
+			"Primeira Volta",
+			"AnaliseForaDogrid"
+		],
+		
+		"SituacoesPrincipais": [
+			"Toque na traseira que provoque a perda da tracao no oponente",
+			"Nao deixar espaco minimo de um carro (linha branca ou zebra como referencia)",
+			"Referente a batidas laterais (porta com porta)",
+			"Permanecer em pista com o carro danificado",
+			"Retornar a pista de forma perigosa",
+			"Passou dos limites de pista (linha branca ou zebra, linha dos boxes)"
+		],
+		"SituacoesIntrinsecas": [
+			"Nao ganhou vantagem",
+			"Nao causou nenhum prejuizo como danos consideraveis ao veiculo do oponente",
+			"Ganhou vantagem",
+			"Causou perda consideravel de tempo: (0.7s ou mais)",
+			"Oponente rodou sem sofrer danos consideráveis ou perder posicoes:",
+			"Causou perda de posicoes mas o oponente nao rodou ou sofreu danos consideraveis",
+			"Oponente rodou sem sofrer danos consideraveis porem houve perda de posicoes",
+			"Oponente rodou e sofreu danos consideraveis no veiculo",
+			"Oponente rodou e sofreu danos graves no veiculo",
+			"Causou strike Inevitavel (o piloto não teve o que fazer)",
+			"Causou strike evitavel (o piloto poderia ter evitado)",
+			"Causado por BUG's no servidor ou simulador"
+		],
+		"SIPunicoes": [
+			"Sem Punicao",
+			"Sem Punicao",
+			"+5 Segundos",
+			"+5 Segundos",
+			"+10 Segundos",
+			"-10 Pontos & +10 Segundos",
+			"-15 Pontos & +15 Segundos",
+			"-20 Pontos & +20 Segundos",
+			"-25 Pontos & +25 Segundos & QualyBan",
+			"-30 Pontos & +30 Segundos & QualyBan",
+			"-50 Pontos, DSQ & Banimento da proxima etapa",
+			"Sem Punicao"
+		],
+
+		"Extra": [
+			"Qualquer tipo de desrespeito, palavras de baixo calão direcionadas a membros nas midias sociais e Chats da RPM Esports",
+			"Qualquer comportamento intencional / vingativo detectado com a intenção em causar danos propositalmente aos adversários.",
+			
+			"DesrespeitoBandeiraAzul",
+			"AtrapalharVolta",
+			"UltrapassagemEmAbertura",
+			"TrackLimits",
+			"DefesaPerigosa",
+			
+			"Qualquer incidente que resulte em grande vantagem para algum piloto",
+			"Trocar modelo do carro ou skin quando isso nao foi permitido",
+			"Nao Cumprir Briefing Obrigatorio",
+			"Nao Cumprir Troca de Pneus, ou adicao de combustível quando isso e obrigatorio",
+			"Utilizar Push to Pass ou outro recurso do veiculo quando isso nao foi permitido",
+			"Desrespeito na largada lançada ou safety car, ganhar posições, ou queimar a largada",
+			"Desrespeito a bandeira amarela (Full Course Yellow) que resulte na desvantagem de algum piloto.",
+			"Causar Full Course Yellow (Bandeira amarela completa no circuito) ou safety car de forma proposital para beneficio proprio",
+			"Utilizar ESC + Voltar para os boxes ou resetar o carro desnecessariamente."
+		],
+		"ExtraPunicoes": [
+			"ExclusaoMidiasABan",
+			"ExclusaoRPM",
+			
+			"TM0:PTS10",
+			"TM0:PTS10",
+			"TM0:PTS10",
+			"TM5:PTS0",
+			"TM0:PTS10",
+			
+			"AdminChoice",
+			"DSQ",
+			"TM0:PTS10",
+			"DSQ",
+			"TM20:PTS0",
+			"TM30:PTS0",
+			"TM15:PTS0",
+			"ExclusaoRPM",
+			"TM0:PTS10"
+		]
+	},
+	
+	"Score": [
+		0,
+		60,
+		57,
+		54,
+		52,
+		50,
+		48,
+		46,
+		44,
+		42,
+		40,
+		37,
+		36,
+		35,
+		34,
+		33,
+		32,
+		31,
+		30,
+		29,
+		28,
+		25,
+		24,
+		23,
+		22,
+		21,
+		20,
+		19,
+		18,
+		17,
+		16,
+		12,
+		11,
+		10,
+		9,
+		8,
+		7,
+		6,
+		5,
+		3,
+		1,
+		0
+	],
+	"ScoreMultiplier" : {
+		"E1B1": 1.0,
+		"E1B2": 1.0,
+		"E2B1": 2.0,
+		"E2B2": 1.0,
+		"E3B1": 1.0,
+		"E3B2": 1.0,
+		"E4B1": 1.0,
+		"E4B2": 1.0,
+		"E5B1": 1.0,
+		"E5B2": 1.0
+	}
+}

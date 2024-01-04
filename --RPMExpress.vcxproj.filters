@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\RankingTools">
+      <UniqueIdentifier>{e9e2f9e5-da99-4402-a44f-6185a87b2bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DefaultFunctions">
+      <UniqueIdentifier>{552ca7f6-b30d-4c5e-a2d2-5a5cfce01593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AnalysisTools">
+      <UniqueIdentifier>{6965493c-fa28-4b6c-963b-7de7b8e92bea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AnalysisRoutes.cpp">
+      <Filter>Source Files\AnalysisTools</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisTools.cpp">
+      <Filter>Source Files\AnalysisTools</Filter>
+    </ClCompile>
+    <ClCompile Include="default_functions.cpp">
+      <Filter>Source Files\DefaultFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscordBot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultFunctionsMySQL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RankingToolsMain.cpp">
+      <Filter>Source Files\RankingTools</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalysisToolsMySQL.cpp">
+      <Filter>Source Files\AnalysisTools</Filter>
+    </ClCompile>
+    <ClCompile Include="RankingToolsMySQL.cpp">
+      <Filter>Source Files\RankingTools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="default_functions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mysql_functions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalysisTools.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscordBot.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RankingTools.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

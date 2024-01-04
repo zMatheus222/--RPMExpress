@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href="static/css/tables.css" rel="stylesheet">
+    <title>Tabela de Classificação</title>
+</head>
+<body>
+    <div class='table-container'>
+
+        <h1 class="table_title">Tabela de Classificação</h1>
+
+        <div class="selectors">
+            
+            <select class="btn_etapa" name="season_selector" onchange="SeasonSelected(event)">
+                <!--START1-->
+                <option class='table_dropdown' value="T22">T22</option>
+                <option class='table_dropdown' value="T23">T23</option>
+                <option class='table_dropdown' value="T24">T24</option>
+                <!--STOP-->
+            </select>
+
+            <div>
+
+                <select class="btn_etapa" name="table_selector" onchange="TableSelected(event)">
+                    <!--START2-->
+                    <option value="T22E1R">Etapa 1 - B1</option>
+                    <!--STOP-->
+                </select>
+
+            </div>
+
+        </div>
+		
+        <div id='buttons-container'>
+            <h1>Tabela - Geral</h1>
+        </div>
+        <!--START3-->
+        <table class='tabela_etapa' id='T22Tabela_Geral'>
+
+            <th class='TG-Long' id='playerID'>playerID</th>
+            <th class='TG-Short' id='cupCategory'>cupCategory</th>
+            <th class='TG-Short' id='raceNumber'>raceNumber</th>
+            <th class='TG-Mid' id='shortName'>shortName</th>
+            <th class='TG-Long' id='firstName'>firstName</th>
+            <th class='TG-Long' id='lastName'>lastName</th>
+            <th class='TG-Long' id='teamName'>teamName</th>
+            <th class='TG-carModel' id='carModel'>carModel</th>
+            <th class='TG-lapCount' id='lapCount'>lapCount</th>
+            <th class='TG-bestLap' id='bestLap'>bestLap</th>
+            <th class='TG-Mid' id='totalTime'>totalTime</th>
+            <th class='TG-Mid' id='Punicao_Tempo'>Punicao_Tempo</th>
+            <th class='TG-Mid' id='Punicao_Pontos'>Punicao_Pontos</th>
+            <th class='TG-Mid' id='Punicoes_Adicionais'>Punicoes_Adicionais</th>
+            <th class='TG-Short' id='E1B1'>E1B1</th>
+            <th class='TG-Short' id='E1B2'>E1B2</th>
+            <th class='TG-Short' id='E2B1'>E2B1</th>
+            <th class='TG-Short' id='E2B2'>E2B2</th>
+            <th class='TG-Short' id='E3B1'>E3B1</th>
+            <th class='TG-Short' id='E3B2'>E3B2</th>
+            <th class='TG-Short' id='E4B1'>E4B1</th>
+            <th class='TG-Short' id='E4B2'>E4B2</th>
+            <th class='TG-Short' id='E5B1'>E5B1</th>
+            <th class='TG-Short' id='E5B2'>E5B2</th>
+        
+            <tr>
+                <td></td>
+                <td>S76561197994172279</td>
+                <td>0</td>
+                <td>470</td>
+                <td>PAU</td>
+                <td></td>
+                <td>Paulo Toledo</td>
+                <td></td>
+                <td>33</td>
+                <td>19</td>
+                <td>2147483647</td>
+                <td>2147483647</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+                        
+            <tr>
+                <td></td>
+                <td>S76561198002532202</td>
+                <td>3</td>
+                <td>44</td>
+                <td>CAR</td>
+                <td></td>
+                <td>Carlos Popó</td>
+                <td></td>
+                <td>8</td>
+                <td>48</td>
+                <td>108100</td>
+                <td>5506588</td>
+                <td>0</td>
+                <td>0</td>
+                <td></td>
+                <td>56</td>
+                <td>0</td>
+                <td>54</td>
+                <td>0</td>
+                <td>22</td>
+                <td>4</td>
+                <td>54</td>
+                <td>0</td>
+                <td>46</td>
+                <td>52</td>
+            </tr>
+        </table>
+        <!--STOP-->
+        <!--START4-->
+        <table class="tabela_temporada" id='T22'>
+
+            <table class="tabela_etapa" id='T22E1R'>
+                
+                <th class='upd'></th>
+                <th class='Pos'>Pos</th>
+                <th class='Cat'>Cat</th>
+                <th class='Pil'>Piloto</th>
+                <th class='Eqp'>Equipe</th>
+                <th class='Num'>Num</th>
+                <th class='Tag'>Tag</th>
+                <th class='Car'>Modelo</th>
+                <th class='Pts'>Pts</th>
+                <th class='Pun' id="PSec">PSec</th>
+                <th class='Pun' id="PTime">PTime</th>
+                <th class='Pun' id="PAdic">PAdic</th>
+        
+                <tr>
+                    <td class="driver_upd">&#9660;</td>	
+                    <td>1</td>
+                    <td class="driver_class">0</td>
+                    <td>Matheus Samuel</td>
+                    <td></td>
+                    <td>2</td>
+                    <td></td>
+                    <td>33</td>
+                    <td>60</td>
+                    <td class="driver_punishment">-15</td>
+                    <td class="driver_punishment">+15</td>
+                    <td class="driver_punishment">DSQ</td>
+                </tr>
+
+            </table>
+        </table>
+        <!--STOP-->
+    </div>
+    <script src="static/js/tables.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos de Análise</title>
+    <link href='static/css/analysis_request.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="request-container">
+        <h1 id="request-title">Pedidos de Análise</h1>
+        <table>
+            <tr>
+                <td><input type="date" id="data-do-pedido" name="data-do-pedido" placeholder="Data do Pedido"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="piloto-solicitante" name="piloto-solicitante" placeholder="Piloto Solicitante"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="piloto-acusado">Piloto Acusado:</label>
+		                <select id="piloto-acusado" name="piloto-acusado" placeholder="Piloto Acusado:">
+						<option value='Paulo Toledo'>Paulo Toledo</option>
+						<option value='Carlos Popó'>Carlos Popó</option>
+						<option value='Diego Brocca'>Diego Brocca</option>
+						<option value='Marcus Bertaglia'>Marcus Bertaglia</option>
+						<option value='Gustavo Dan'>Gustavo Dan</option>
+						<option value='Raphael Fonseca'>Raphael Fonseca</option>
+						<option value='Ricardo Brito'>Ricardo Brito</option>
+						<option value='Rolf Campos'>Rolf Campos</option>
+						<option value='Magno Fahel'>Magno Fahel</option>
+						<option value='Ricardo Semensato'>Ricardo Semensato</option>
+						<option value='Ramires Fischer'>Ramires Fischer</option>
+						<option value='Mauro Oliveira'>Mauro Oliveira</option>
+						<option value='Henrique Lustosa'>Henrique Lustosa</option>
+						<option value='Alexandre Almeida'>Alexandre Almeida</option>
+						<option value='Rick Teodoro'>Rick Teodoro</option>
+						<option value='Lucas Fachin'>Lucas Fachin</option>
+						<option value='Tharso Bersano'>Tharso Bersano</option>
+						<option value='Pedro Americo'>Pedro Americo</option>
+						<option value='Guilherme Castro Oliveira'>Guilherme Castro Oliveira</option>
+						<option value='Thiago Moura'>Thiago Moura</option>
+						<option value='Stenio Zimermann'>Stenio Zimermann</option>
+						<option value='Dimitri Menezes'>Dimitri Menezes</option>
+						<option value='Mateus Dazgata'>Mateus Dazgata</option>
+						<option value='Wendel George'>Wendel George</option>
+						<option value='Luan Costa'>Luan Costa</option>
+						<option value='Gustavo Gobi'>Gustavo Gobi</option>
+						<option value='Matheus Samuel'>Matheus Samuel</option>
+						<option value='Gabriel Pastorini'>Gabriel Pastorini</option>
+						<option value='Irineu Eler'>Irineu Eler</option>
+						<option value='André Massari'>André Massari</option>
+						<option value='Camila Fernandes'>Camila Fernandes</option>
+						<option value='Jean Ferreira'>Jean Ferreira</option>
+						<option value='Rodi Nunes'>Rodi Nunes</option>
+						<option value='Matheus Silva'>Matheus Silva</option>
+						<option value='Marcio Alves'>Marcio Alves</option>
+						<option value='Edimar Cardoso'>Edimar Cardoso</option>
+						<option value='Flavio Hulk'>Flavio Hulk</option>
+						<option value='Carlos Xavier'>Carlos Xavier</option>
+						<option value='Michael Filgueira '>Michael Filgueira </option>
+						<option value='Gabriel Skalecki'>Gabriel Skalecki</option>
+						<option value='Robert Lewandowsk'>Robert Lewandowsk</option>
+						<option value='Erisson Borge'>Erisson Borge</option>
+						<option value='Diego Delatorre'>Diego Delatorre</option>
+						<option value='Julio Fabi'>Julio Fabi</option>
+						<option value='Leo Sava'>Leo Sava</option>
+						<option value='Welton Gonçalves'>Welton Gonçalves</option>
+						<option value='Gabriel Yuri'>Gabriel Yuri</option>
+						<option value='Job lima '>Job lima </option>
+						<option value='Wellington Aleixo'>Wellington Aleixo</option>
+						<option value='Oque Katagrama'>Oque Katagrama</option>
+						<option value='Zaca DicasF1'>Zaca DicasF1</option>
+						<option value='Rodrigo Soto'>Rodrigo Soto</option>
+						<option value='Jonathan Miquelote'>Jonathan Miquelote</option>
+						<option value='Max Silva'>Max Silva</option>
+						<option value='Rodrigo Forace'>Rodrigo Forace</option>
+						<option value='Wesley Santos'>Wesley Santos</option>
+						<option value='NUNES'>NUNES</option>
+                        <!--STOP-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="season">Temporada:</label>
+                    <input type="text" id="season" name="temporada" placeholder="Temporada" value="T21">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="simulador">Simulador:</label>
+		                <select id="simulador" name="simulador" placeholder="Simulador">
+                        <option value="Assetto Corsa Competizione">Assetto Corsa Competizione</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="etapa">Etapa:</label>
+                    <select id="etapa" name="etapa">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="bateria">Bateria:</label>
+                    <select id="bateria" name="bateria">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+		            <label for="minuto-do-incidente">Minuto do incidente (Hora:Min:Seg)</label>
+                    <input type="time" id="minuto-do-incidente" name="minuto-do-incidente" placeholder="Minuto do Incidente" min="00:00" max="120:00" step="1">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="url" id="link-da-gravacao" name="link-da-gravacao" placeholder="Link da Gravação ou arquivo de replay"></td>
+            </tr>
+            <tr>
+                <td><textarea id="contexto" name="contexto" rows="4" cols="50" placeholder="Contexto"></textarea></td>
+            </tr>
+        </table>
+        <button id="enviar-button">Enviar Pedido</button>
+    </div>
+	<script src="static/js/analysis_request.js"></script>
+</body>
+</html>
