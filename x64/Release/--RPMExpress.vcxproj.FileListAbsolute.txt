@@ -1,0 +1,16 @@
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\--RPMExpress.exe
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\--RPMExpress.vcxproj.CopyComplete
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\libcrypto-3-x64.dll
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\libssl-3-x64.dll
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\dpp.dll
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\opus.dll
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\libsodium.dll
+D:\USE\Projects\BIG\--RPMExpress\x64\Release\zlib1.dll
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\--RPMExpress.exe
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\--RPMExpress.vcxproj.CopyComplete
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\libcrypto-3-x64.dll
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\libssl-3-x64.dll
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\dpp.dll
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\opus.dll
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\libsodium.dll
+D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\zlib1.dll

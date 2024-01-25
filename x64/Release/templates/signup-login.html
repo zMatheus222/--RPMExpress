@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPM Express - Seja Bem Vindo!</title>
+    <!-- Adicionando o link para a fonte Poppins do Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href='static/css/signup-login.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Adicionando a imagem do logotipo -->
+    <img id="logotipo" src="https://i.imgur.com/YSPfrIP.png" alt="Logotipo RPM Express">
+
+    <header>
+        <h1>RPM Express - Seja Bem Vindo!</h1>
+        <p1>Realize o login ou cadastre-se abaixo.</p1>
+    </header>
+
+    <!-- Adicionando campos de formulário para email e senha -->
+    <div class="login">
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <!-- Adicionando botões de login e cadastro -->
+            <button class="login" type="submit">Login</button>
+        </form>
+        <button class="cadastro" id="cadastroButton">Cadastre-se</button>
+    </div>
+
+    <div class="registro" id="registroForm">
+        <form>
+            <div class="double_field">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" required>
+            </div>
+
+            <div class="double_field">
+                <input type="email" id="emailCadastro" name="email" placeholder="Email" required>
+                <input type="password" id="senhaCadastro" name="senha" placeholder="Senha" required>
+            </div>
+            <input type="password" id="repetir_senha" name="repetir_senha" placeholder="Repita sua senha" required>
+
+            <label for="datanascimento">Data de Nascimento:</label>
+            <input type="date" id="datanascimento" name="datanascimento" required>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <!-- Opções para estados (ou regiões, dependendo do país) -->
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="mg">Minas Gerais</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+
+            <div class="double_field">
+                <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{11}" placeholder="Celular (WhatsApp)" required>
+            </div>
+
+            <input type="text" id="steam_guid" name="steam_guid" placeholder="Steam GUID" required>
+
+            <label for="equipe">Equipe:</label>
+            <select id="equipe" name="equipe" required>
+                <!-- Opções para estados (ou regiões, dependendo do país) -->
+                <option value="ELG">Elitegroup AV</option>
+                <option value="MAR">Marsch Team</option>
+                <option value="GOR">Gorillas Team</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+
+            <!-- Adicionando botões de login e cadastro -->
+            <button class="realizarcadastro" type="submit">Realizar Cadastro</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 RPM Esports. Todos os direitos reservados.</p>
+    </footer>
+    <script src="static/js/signup-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+﻿  AnalysisToolsMySQL.cpp
+LINK : fatal error LNK1104: cannot open file 'D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release\--RPMExpress.exe'

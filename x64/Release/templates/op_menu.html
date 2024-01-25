@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href="static/css/op_menu.css" rel="stylesheet">
+</head>
+<body>
+    <div class="table-container">
+        <h1 class="table_title">Central da Organização - RPM Express</h1>
+        <button class="sideside" onclick="changeDivVisibility('DatabaseContainer')">Banco de Dados</button>
+        <button class="sideside" onclick="changeDivVisibility('analysisContainer')">Resolver Análise</button>
+        <button class="sideside">Criar Evento</button>
+        <button class="sideside" onclick="changeDivVisibility('tablesContainer')">Tabelas</button>
+        <button class="sideside">Divulgação</button>
+    </div>
+
+    <!-- Container para opções do banco de dados -->
+    <div id="DatabaseContainer" class='table-container'>
+        <iframe id="analysisFrame" frameborder="0" width="100%" height="600px" src="database_options.html"></iframe>
+    </div>
+    
+    <!-- Container para a análise -->
+    <div id="analysisContainer" class='table-container'>
+        <iframe id="analysisFrame" frameborder="0" width="100%" height="600px" src="analysis_show_after.html"></iframe>
+    </div>
+
+    <!-- Container para as tabelas -->
+    <div id="tablesContainer" class='table-container'>
+        <iframe id="tablesFrame" frameborder="0" width="100%" height="600px" src="table_after.html"></iframe>
+    </div>
+
+    <script src="static/js/op_menu.js"></script>
+</body>
+</html>

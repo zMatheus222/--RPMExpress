@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='UTF-8'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet'>
+    <link href='static/css/analysis_show.css' rel='stylesheet'>
+    <title>Visualização de Pedidos de Análise</title>
+</head>
+
+<body>
+    <h1>Lista de Pedidos de Análise</h1>
+	<div class='season-selector'>
+		<button onclick='toggleSeasons(21)'>Selecione a Temporada</button>
+		<div class='season-dropdown' id='seasonDropdown'>
+			<a href='#' onclick='toggleSeasons("T22")'>T22</a>
+		</div>
+		<button id='btn-apply-punishiment' class='btn-apply-punishiment'>Aplicar punicao</button>
+	</div>
+<table class='season_table' id = 'T22'>
+	<tr>
+		<th>Id</th>
+		<th>Data do Pedido</th>
+		<th>Piloto Solicitante</th>
+		<th>Piloto Acusado</th>
+		<th>Simulador</th>
+		<th>Etapa</th>
+		<th>Bateria</th>
+		<th>Minuto</th>
+		<th>Link Gravacao</th>
+		<th>Status</th>
+	</tr>
+
+		<tr class='main-row'>
+			<td>1</td>
+			<td>2024-01-24</td>
+			<td id="p_solicitante">Adriano Peixoto</td>
+			<td id="p_acusado">Guilherme Castro Oliveira</td>
+			<td>Assetto Corsa Competizione</td>
+			<td id="etapa">1</td>
+			<td id="bateria">1</td>
+			<td id="momento">00:02:36</td>
+			<td><button class='btn_record' onclick="window.open('https://drive.google.com/file/d/1FMoqtbh1kMXHjWqMYOL7FgKTPWd0Ozl7/view?usp=drive_link', '_blank')">Acessar</button></td>
+			<td id="a_status"><button class='btn-amarelo'>Pendente</button></td>
+		</tr>
+		<tr class='details-row'>
+			<td colspan='9'>
+				<div class='details-container'>
+					<!-- Seus detalhes adicionais -->
+					<div><strong>Contexto: </strong>Por gentileza me corrija o piloto se eu estiver falando da pessoa errada, mas foi o unico Guilherme que achei na lista, porém na corrida esta como Guilherme Marques (Porsche 177).
+O caso em questão que mesmo os senhores alertando os cuidados na largada, o piloto a quem me refiro ignorou tal alerta e conseguiu me tirar da corrida na reta, colocando o carro onde já não havia espaço.
+Por gentileza tomar as decisões cabiveis ao caso em questão. 
+Obrigado</div>
+					<div><strong>Situacao Principal: </strong></div>
+					<div><strong>Situacao Intrinseca: </strong></div>
+					<div><strong>Punicao de Tempo: </strong></div>
+					<div><strong>Punicao de Pontos: </strong></div>
+					<div><strong>Punicoes Adicionais: </strong></div>
+				</div>
+			</td>
+		</tr>
+
+	</table>
+    <!--STOP-->
+    <!-- Modal -->
+    <div id='myModal' class='modal'>
+        <div class='modal-content'>
+            <span class='close' onclick='closeModal()'>&times;</span>
+            <h3>Resolver / Alterar Analise</h3>
+            <!-- Campos de seleção -->
+            <label for='campo0'>Piloto a ser punido:</label>
+            <select id='campo0'>
+                <option value='1'>1-Luan Costa</option>
+                <option value='2'>2-Matheus Samuel</option>
+                <option value='3'>3-Ramires Fischer</option>
+                <option value='4'>4-Luana Costa</option>
+            </select>
+            <label for='campo1'>Situação Principal:</label>
+            <select id='campo1'>
+                <option value='1'>1-Toque na traseira</option>
+                <option value='2'>2-Nao deixar espaço minimo de um carro</option>
+                <option value='3'>3-Referente a batidas laterais</option>
+                <option value='4'>4-Permanecer em pista com o carro danificado</option>
+                <option value='5'>5-Retornar a pista de forma perigosa</option>
+                <option value='6'>6-Passou dos limites de pista</option>
+            </select>
+            <label for='campo2'>Situação Intrínseca:</label>
+            <select id='campo2'>
+                <option value='1'>1-Nao ganhou vantagem</option>
+                <option value='2'>2-Nao causou nenhum prejuizo como danos consideraveis ao veiculo do oponente</option>
+                <option value='3'>3-Ganhou vantagem</option>
+                <option value='4'>4-Causou perda consideravel de tempo (0.7s ou mais)</option>
+                <option value='5'>5-Oponente rodou sem sofrer danos consideraveis ou perder posicoes</option>
+                <option value='6'>6-Causou perda de posicoes, mas o oponente nao rodou ou sofreu danos consideraveis</option>
+                <option value='7'>7-Oponente rodou sem sofrer danos consideraveis, mas houve perda de posicoes</option>
+                <option value='8'>8-Oponente rodou e sofreu danos consideraveis no veiculo</option>
+                <option value='9'>9-Oponente rodou e sofreu danos graves no veiculo</option>
+                <option value='10'>10-Causou strike inevitavel</option>
+                <option value='11'>11-Causou strike evitavel</option>
+                <option value='12'>12-Causado por BUG's</option>
+            </select>
+            <label>
+                <input type='checkbox' name='reincident' class='checkbox' >Reincidência
+                
+            </label>
+
+            <label for='resume_field' class="resume_field_h">Resumo:</label>
+            <div class="resume_container"><input type='text' id='resume_field' name='resume_field' placeholder='Digite o resumo do lance:'></div>
+            <!-- Seus detalhes adicionais -->
+            <div id='additional-details'></div>
+            <button id='enviarBtn' class='btn_modal'>Enviar</button>
+        </div>
+    </div>
+    <!-- Modal aplicar punição -->
+    <div id='myModal_aplicar_punicao' class='modal'>
+
+        <div class='modal-content'>
+            <span class='close' onclick='closeModal()'>&times;</span>
+            <h3>Aplicar Punição</h3>
+
+            <!-- Campos de seleção -->
+            <label for='campo_temp'>Temporada/Etapa/Bateria</label>
+            <select id='campo_temp'>
+				<option value = 'T22E1'>T22E1</option>
+                <!--STOP-->
+            </select>
+
+            <label for='campo0_aplicar_punicao'>Piloto a ser punido:</label>
+            <select id='campo0_aplicar_punicao'>
+				<option value='S76561197994172279'>Paulo Toledo</option>
+				<option value='S76561198002532202'>Carlos Popó</option>
+				<option value='S76561198009120418'>Diego Brocca</option>
+				<option value='S76561198009297186'>Marcus Bertaglia</option>
+				<option value='S76561198016255479'>Gustavo Dan</option>
+				<option value='S76561198016704382'>Raphael Fonseca</option>
+				<option value='S76561198037231176'>Ricardo Brito</option>
+				<option value='S76561198040302353'>Rolf Campos</option>
+				<option value='S76561198056618008'>Magno Fahel</option>
+				<option value='S76561198058207535'>Ricardo Semensato</option>
+				<option value='S76561198063467361'>Ramires Fischer</option>
+				<option value='S76561198072947349'>Mauro Oliveira</option>
+				<option value='S76561198073951417'>Henrique Lustosa</option>
+				<option value='S76561198076823340'>Alexandre Almeida</option>
+				<option value='S76561198078292797'>Rick Teodoro</option>
+				<option value='S76561198078869093'>Lucas Fachin</option>
+				<option value='S76561198087212555'>Tharso Bersano</option>
+				<option value='S76561198089267324'>Pedro Americo</option>
+				<option value='S76561198092366123'>Guilherme Castro Oliveira</option>
+				<option value='S76561198096492357'>Thiago Moura</option>
+				<option value='S76561198102306429'>Stenio Zimermann</option>
+				<option value='S76561198115905350'>Dimitri Menezes</option>
+				<option value='S76561198125230681'>Mateus Dazgata</option>
+				<option value='S76561198129085554'>Wendel George</option>
+				<option value='S76561198137465563'>Luan Costa</option>
+				<option value='S76561198141374072'>Gustavo Gobi</option>
+				<option value='S76561198163723827'>Matheus Samuel</option>
+				<option value='S76561198169740088'>Gabriel Pastorini</option>
+				<option value='S76561198196023401'>Irineu Eler</option>
+				<option value='S76561198216215549'>André Massari</option>
+				<option value='S76561198370099943'>Camila Fernandes</option>
+				<option value='S76561198375495450'>Jean Ferreira</option>
+				<option value='S76561198416857231'>Rodi Nunes</option>
+				<option value='S76561198540394923'>Matheus Silva</option>
+				<option value='S76561198575888325'>Marcio Alves</option>
+				<option value='S76561198817329312'>Edimar Cardoso</option>
+				<option value='S76561198862871682'>Flavio Hulk</option>
+				<option value='S76561198907370528'>Carlos Xavier</option>
+				<option value='S76561198931372930'>Michael Filgueira </option>
+				<option value='S76561198967095516'>Gabriel Skalecki</option>
+				<option value='S76561199015171579'>Robert Lewandowsk</option>
+				<option value='S76561199029829360'>Erisson Borge</option>
+				<option value='S76561199050473010'>Diego Delatorre</option>
+				<option value='S76561199054865134'>Julio Fabi</option>
+				<option value='S76561199060208935'>Leo Sava</option>
+				<option value='S76561199070003434'>Welton Gonçalves</option>
+				<option value='S76561199133361667'>Gabriel Yuri</option>
+				<option value='S76561199148603933'>Job lima </option>
+				<option value='S76561199178250168'>Wellington Aleixo</option>
+				<option value='S76561199183754177'>Oque Katagrama</option>
+				<option value='S76561199217133438'>Zaca DicasF1</option>
+				<option value='S76561199259571766'>Rodrigo Soto</option>
+				<option value='S76561199380374475'>Jonathan Miquelote</option>
+				<option value='S76561199405182320'>Max Silva</option>
+				<option value='S76561199471772201'>Rodrigo Forace</option>
+				<option value='S76561199480093747'>Wesley Santos</option>
+				<option value='S76561198416857231'>NUNES</option>
+				<option value='S76561198000346416'>Penna</option>
+				<option value='S76561198002480478'>da Silva</option>
+				<option value='S76561198015329559'>Rocha</option>
+				<option value='S76561198016704382'>Fonseca</option>
+				<option value='S76561198023358659'>Mafra | B-Side</option>
+				<option value='S76561198025621782'>Wall | B-Side</option>
+				<option value='S76561198058207535'>Semensato</option>
+				<option value='S76561198063467361'>Fischer</option>
+				<option value='S76561198086089829'>Zani</option>
+				<option value='S76561198087212555'>Bersano</option>
+				<option value='S76561198088926046'>Rosa</option>
+				<option value='S76561198096492357'>moura</option>
+				<option value='S76561198113894650'>Mota</option>
+				<option value='S76561198123404017'>Queiroz</option>
+				<option value='S76561198125230681'>Dazgata</option>
+				<option value='S76561198135874757'>Ramos</option>
+				<option value='S76561198154269416'>Dias</option>
+				<option value='S76561198167813733'>Ribeiro</option>
+				<option value='S76561198264151431'>França</option>
+				<option value='S76561198307215029'>Bueno</option>
+				<option value='S76561198345975822'>Sales</option>
+				<option value='S76561198416857231'>RODI</option>
+				<option value='S76561198880040561'>Correia</option>
+				<option value='S76561198956570660'>PEIXOTO</option>
+				<option value='S76561199133361667'>Yuri</option>
+				<option value='S76561199156378819'>racing mg</option>
+				<option value='S76561199217133438'>DICASF1</option>
+				<option value='S76561199259571766'>Soto</option>
+				<option value='S76561199372270611'>cariok br</option>
+				<option value='S76561199519072950'>Martins</option>
+				<option value='S76561197994172279'>Paulo Toledo</option>
+				<option value='S76561198001297088'>Maganini Jr</option>
+				<option value='S76561198009120418'>Diego Brocca</option>
+				<option value='S76561198015329559'>Caio Rocha</option>
+				<option value='S76561198023827631'>Raphael Souza</option>
+				<option value='S76561198027218840'>Gabriel Felipe</option>
+				<option value='S76561198058207535'>Ricardo Semensato</option>
+				<option value='S76561198076823340'>Aledesta Senna</option>
+				<option value='S76561198078869093'>Lucas Fachim</option>
+				<option value='S76561198087212555'>Tharso Bersano</option>
+				<option value='S76561198088926046'>Marcos Rosa</option>
+				<option value='S76561198125230681'>Matheus Nunes</option>
+				<option value='S76561198141374072'>Gustavo Gobi Rosales</option>
+				<option value='S76561198154269416'>Ricardo Dias</option>
+				<option value='S76561198192896005'>Santos GRT</option>
+				<option value='S76561198196023401'>Irineu Eler</option>
+				<option value='S76561198264151431'>Daniel Frana a</option>
+				<option value='S76561198375495450'>Jean Ferreira</option>
+				<option value='S76561198416857231'>Rodrigo Nunes Coneglian</option>
+				<option value='S76561198540394923'>Matheus Silva</option>
+				<option value='S76561198889530134'>Hugo Marcell</option>
+				<option value='S76561198907370528'>Carlos Xavier</option>
+				<option value='S76561198956570660'>Adriano Peixoto</option>
+				<option value='S76561199050473010'>Diego Delatorre</option>
+				<option value='S76561199054865134'>Julio Fabi</option>
+				<option value='S76561199073545642'>Guilherme Marques</option>
+				<option value='S76561199103292023'>Ronaldo Guillen</option>
+				<option value='S76561199133361667'>Gabriel Yuri</option>
+				<option value='S76561199150359692'>Matheus Garcia Barros</option>
+				<option value='S76561199230870139'>Juan Martins</option>
+				<option value='S76561199259571766'>Rodrigo Soto</option>
+				<option value='S76561199471772201'>Rodrigo Forace</option>
+				<option value='S76561199512131607'>Rosemberg Lima</option>
+				<option value='S76561197994172279'>Paulo Toledo</option>
+				<option value='S76561198001297088'>Maganini Jr</option>
+				<option value='S76561198009120418'>Diego Brocca</option>
+				<option value='S76561198015329559'>Caio Rocha</option>
+				<option value='S76561198023827631'>Raphael Souza</option>
+				<option value='S76561198027218840'>Gabriel Felipe</option>
+				<option value='S76561198058207535'>Ricardo Semensato</option>
+				<option value='S76561198076823340'>Aledesta Senna</option>
+				<option value='S76561198078869093'>Lucas Fachim</option>
+				<option value='S76561198087212555'>Tharso Bersano</option>
+				<option value='S76561198088926046'>Marcos Rosa</option>
+				<option value='S76561198125230681'>Matheus Nunes</option>
+				<option value='S76561198141374072'>Gustavo Gobi Rosales</option>
+				<option value='S76561198154269416'>Ricardo Dias</option>
+				<option value='S76561198192896005'>Paulo Santos</option>
+				<option value='S76561198196023401'>Irineu Eler</option>
+				<option value='S76561198264151431'>Daniel Franca</option>
+				<option value='S76561198375495450'>Jean Ferreira</option>
+				<option value='S76561198416857231'>Rodrigo Nunes Coneglian</option>
+				<option value='S76561198540394923'>Matheus Silva</option>
+				<option value='S76561198889530134'>Hugo Marcell</option>
+				<option value='S76561198907370528'>Carlos Xavier</option>
+				<option value='S76561198956570660'>Adriano Peixoto</option>
+				<option value='S76561199050473010'>Diego Delatorre</option>
+				<option value='S76561199054865134'>Julio Fabi</option>
+				<option value='S76561199073545642'>Guilherme Marques</option>
+				<option value='S76561199103292023'>Ronaldo Guillen</option>
+				<option value='S76561199133361667'>Gabriel Yuri</option>
+				<option value='S76561199150359692'>Matheus Garcia Barros</option>
+				<option value='S76561199217133438'>DICASF1</option>
+				<option value='S76561199230870139'>Juan Martins</option>
+				<option value='S76561199259571766'>Rodrigo Soto</option>
+				<option value='S76561199471772201'>Rodrigo Forace</option>
+				<option value='S76561199512131607'>Rosemberg Lima</option>
+                <!--STOP-->
+            </select>
+            <label for='campo1_aplicar_punicao'>Situação Principal:</label>
+            <select id='campo1_aplicar_punicao'>
+                <option value='1'>1-Toque na traseira</option>
+                <option value='2'>2-Nao deixar espaço minimo de um carro</option>
+                <option value='3'>3-Referente a batidas laterais</option>
+                <option value='4'>4-Permanecer em pista com o carro danificado</option>
+                <option value='5'>5-Retornar a pista de forma perigosa</option>
+                <option value='6'>6-Passou dos limites de pista</option>
+            </select>
+            <label for='campo2_aplicar_punicao'>Situação Intrínseca:</label>
+            <select id='campo2_aplicar_punicao'>
+                <option value='1'>1-Nao ganhou vantagem</option>
+                <option value='2'>2-Nao causou nenhum prejuizo como danos consideraveis ao veiculo do oponente</option>
+                <option value='3'>3-Ganhou vantagem</option>
+                <option value='4'>4-Causou perda consideravel de tempo (0.7s ou mais)</option>
+                <option value='5'>5-Oponente rodou sem sofrer danos consideraveis ou perder posicoes</option>
+                <option value='6'>6-Causou perda de posicoes, mas o oponente nao rodou ou sofreu danos consideraveis</option>
+                <option value='7'>7-Oponente rodou sem sofrer danos consideraveis, mas houve perda de posicoes</option>
+                <option value='8'>8-Oponente rodou e sofreu danos consideraveis no veiculo</option>
+                <option value='9'>9-Oponente rodou e sofreu danos graves no veiculo</option>
+                <option value='10'>10-Causou strike inevitavel</option>
+                <option value='11'>11-Causou strike evitavel</option>
+                <option value='12'>12-Causado por BUG's</option>
+            </select>
+            <label>
+                <input type='checkbox' name='reincident' class='checkbox' >Reincidência
+                
+            </label>
+            <button id='enviarBtn_aplicar_punicao' class='btn_modal'>Enviar</button>
+        </div>
+
+    </div>
+    <script src="static/js/analysis_show.js"></script>
+</body>
+</html>

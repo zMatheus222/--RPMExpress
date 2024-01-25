@@ -1,0 +1,23 @@
+﻿  AnalysisTools.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  default_functions.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  DiscordBot.cpp
+C:\Users\mathe\vcpkg\installed\x64-windows\include\dpp\export.h(33,1): fatal  error C1189: #error:  "D++ Requires a C++17 compatible C++ compiler. Please ensure that you have enabled C++17 in your compiler flags."
+  main.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  DefaultFunctionsMySQL.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  AnalysisRoutes.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  RankingToolsMain.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  AnalysisToolsMySQL.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  RankingToolsMySQL.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  RPM-Downloader.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  RPM-DownloaderMySQL.cpp
+D:\USE\Projects\GIT-Repos\--RPMExpress\mysql_functions.hpp(10,10): fatal  error C1083: Cannot open include file: 'mysql_connection.h': No such file or directory
+  Generating Code...

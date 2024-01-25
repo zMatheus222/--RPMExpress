@@ -1,0 +1,17 @@
+{
+	"Operator_Password" : "hd22x18hA98hd389z124HD8as8",
+	"MySQL_Keys" : {
+		"MySQL_Server" : "152.67.46.72:3306",
+		"MySQL_Username" : "matheus",
+		"MySQL_Password" : "@Passw2700xHaxas223"
+	},	
+	"Discord_Keys" : {
+		"BOT_TOKEN" : "MTE3NDQ1Njk3NDk4MTczODUwNw.GP8j_4.82jO33zDijXVE_ZOD2HY_ujUNv6XTbONVDUPVo",
+		"Chat_Geral_ChannelID" : 916813888488615956,
+		"AA_Show_ChannelID" : 1009526632953938021,
+		"AA_Alert_ChannelID" : 1174861636864057374
+	},
+	"Debug_Logs": "true",
+	"Exlog_Shows" : "All",
+	"Exlog_Colors": "false"
+}

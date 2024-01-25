@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    <link href="static/css/tables.css" rel="stylesheet">
+    <title>Tabela de Classificação</title>
+</head>
+<body>
+    <div class='table-container'>
+
+        <h1 class="table_title">Tabela de Classificação</h1>
+
+        <div class="selectors">
+            
+            <select class="btn_etapa" name="season_selector" onchange="SeasonSelected(event)">
+				<option value='T22'>T22</option>
+                <!--STOP-->
+            </select>
+
+            <div>
+
+                <select class="btn_etapa" name="table_selector" onchange="TableSelected(event)">
+				<option class='table_dropdown' value='T22E1R'>E1 - kyalami</option>
+				<option class='table_dropdown' value='T22Tabela_Geral'>Tabela Geral</option>
+                    <!--STOP-->
+                </select>
+
+            </div>
+
+        </div>
+		
+        <div id='buttons-container'>
+            <h1>Tabela - Geral</h1>
+        </div>
+
+			<table class="tabela_temporada" id='T22'>
+
+			<table class='tabela_etapa' id='T22Tabela_Geral'>
+
+				<th class='TG-Short' id='cupCategory'>Classe</th>
+				<th class='TG-Short' id='raceNumber'>Number</th>
+				<th class='TG-Short' id='shortName'>Tag</th>
+				<th class='TG-Long' id='Nome'>Nome</th>
+				<th class='TG-Long' id='Equipe'>Equipe</th>
+				<th class='TG-Long' id='Model'>Modelo</th>
+                <th class='TG-Short' id='Punicao_Tempo'>P_Tempo</th>
+                <th class='TG-Short' id='Punicao_Pontos'>P_Pontos</th>
+                <th class='TG-Short' id='Punicoes_Adicionais'>P_Extra</th>
+                <th class='TG-Short' id='E1B1'>E1B1</th>
+                <th class='TG-Short' id='E1B2'>E1B2</th>
+                <th class='TG-Short' id='E2B1'>E2B1</th>
+                <th class='TG-Short' id='E2B2'>E2B2</th>
+                <th class='TG-Short' id='E3B1'>E3B1</th>
+                <th class='TG-Short' id='E3B2'>E3B2</th>
+                <th class='TG-Short' id='E4B1'>E4B1</th>
+                <th class='TG-Short' id='E4B2'>E4B2</th>
+                <th class='TG-Short' id='E5B1'>E5B1</th>
+                <th class='TG-Short' id='E5B2'>E5B2</th>
+				<th class='TG-Short' id='TotalPontos'>Pontos</th>
+			
+				<tr>
+					<td>0</td>
+					<td>470</td>
+					<td></td>
+					<td>Paulo Toledo</td>
+					<td>Gorillas Racing A</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>57</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>63</td>
+					<td></td>
+					<td>Maganini Jr</td>
+					<td>Gorillas Racing A</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>29</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>13</td>
+					<td></td>
+					<td>Diego Brocca</td>
+					<td>Flash Speedsters</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>9</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>65</td>
+					<td></td>
+					<td>Caio Rocha</td>
+					<td>Thunder Racers</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>17</td>
+					<td></td>
+					<td>Raphael Souza</td>
+					<td>Thunder Racers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>54</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>27</td>
+					<td>GAB</td>
+					<td>Gabriel Felipe</td>
+					<td>Turbo Legends</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>60</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>90</td>
+					<td>RIC</td>
+					<td>Ricardo Semensato</td>
+					<td>Gorillas Racing B</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>52</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>214</td>
+					<td>ALE</td>
+					<td>Aledesta Senna</td>
+					<td>Lightning Strikers</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>11</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>73</td>
+					<td></td>
+					<td>Lucas Fachim</td>
+					<td>Eclipse Racers</td>
+					<td>25</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>78</td>
+					<td></td>
+					<td>Tharso Bersano</td>
+					<td>Nitro Chargers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>33</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>74</td>
+					<td></td>
+					<td>Marcos Rosa</td>
+					<td>Velocity Fusion</td>
+					<td>25</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>17</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>47</td>
+					<td>MAT</td>
+					<td>Matheus Nunes</td>
+					<td>Eclipse Racers</td>
+					<td>30</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>23</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>69</td>
+					<td></td>
+					<td>Gustavo Gobi Rosales</td>
+					<td>Thunderbolt Racers</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>25</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>55</td>
+					<td>RIC</td>
+					<td>Ricardo Dias</td>
+					<td>Gorillas Racing A</td>
+					<td>20</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>50</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>20</td>
+					<td>PES</td>
+					<td>Paulo Santos</td>
+					<td>Sonic Racers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>24</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>448</td>
+					<td></td>
+					<td>Irineu Eler</td>
+					<td>Racing Titans</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>42</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>77</td>
+					<td>FRA</td>
+					<td>Daniel Franca</td>
+					<td>Eclipse Racers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>20</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>888</td>
+					<td></td>
+					<td>Jean Ferreira</td>
+					<td>Gorillas Racing B</td>
+					<td>30</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>36</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>84</td>
+					<td></td>
+					<td>Rodrigo Nunes Coneglian</td>
+					<td>Lightning Strikers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>37</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>95</td>
+					<td></td>
+					<td>Matheus Silva</td>
+					<td>Thunderbolt Racers</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>46</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>4</td>
+					<td>HUG</td>
+					<td>Hugo Marcell</td>
+					<td>Sonic Racers</td>
+					<td>25</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>21</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>168</td>
+					<td>CAR</td>
+					<td>Carlos Xavier</td>
+					<td>Turbo Legends</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>28</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>33</td>
+					<td></td>
+					<td>Adriano Peixoto</td>
+					<td>Velocity Fusion</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>19</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>93</td>
+					<td></td>
+					<td>Diego Delatorre</td>
+					<td>Thunderbolt Racers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>48</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>72</td>
+					<td>JUL</td>
+					<td>Julio Fabi</td>
+					<td>Flash Speedsters</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>30</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>177</td>
+					<td></td>
+					<td>Guilherme Marques</td>
+					<td>Velocity Fusion</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>16</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>974</td>
+					<td></td>
+					<td>Ronaldo Guillen</td>
+					<td>Speed Challengers</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>321</td>
+					<td></td>
+					<td>Gabriel Yuri</td>
+					<td>Gorillas Racing B</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>18</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>23</td>
+					<td></td>
+					<td>Matheus Garcia Barros</td>
+					<td>Speed Challengers</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>44</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>755</td>
+					<td>PLY</td>
+					<td>DICASF1</td>
+					<td>Thunder Racers</td>
+					<td>35</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>12</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>12</td>
+					<td></td>
+					<td>Juan Martins</td>
+					<td>Juan Martins</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>40</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>277</td>
+					<td></td>
+					<td>Rodrigo Soto</td>
+					<td>Team Velocity</td>
+					<td>20</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>10</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>2</td>
+					<td>8</td>
+					<td></td>
+					<td>Rodrigo Forace</td>
+					<td>Flash Speedsters</td>
+					<td>34</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>22</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							
+				<tr>
+					<td>0</td>
+					<td>733</td>
+					<td>ROS</td>
+					<td>Rosemberg Lima</td>
+					<td>Turbo Legends</td>
+					<td>32</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>31</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+							</table>        <!--STOP-->
+
+			<table class="tabela_temporada" id='T22'>
+
+			<table class='tabela_etapa' id='T22E1R'>
+
+				<th class='upd'></th>
+				<th class='Pos'>Pos</th>
+				<th class='Cat'>Cat</th>
+				<th class='Pil'>Piloto</th>
+				<th class='Eqp'>Equipe</th>
+				<th class='Num'>Num</th>
+				<th class='Tag'>Tag</th>
+				<th class='Car'>Modelo</th>
+				<th class='Pts'>Pts</th>
+				<th class='Pun' id="PSec">PSec</th>
+                <th class='Pun' id="PTime">PTime</th>
+                <th class='Pun' id="PAdic">PAdic</th>
+			
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>1</td>
+					<td class="driver_class">0</td>
+					<td>Gabriel Felipe</td>
+					<td>Turbo Legends</td>
+					<td>27</td>
+					<td>GAB</td>
+					<td>34</td>
+					<td>60</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>2</td>
+					<td class="driver_class">0</td>
+					<td>Paulo Toledo</td>
+					<td>Gorillas Racing A</td>
+					<td>470</td>
+					<td></td>
+					<td>32</td>
+					<td>57</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>3</td>
+					<td class="driver_class">2</td>
+					<td>Raphael Souza</td>
+					<td>Thunder Racers</td>
+					<td>17</td>
+					<td></td>
+					<td>32</td>
+					<td>54</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>4</td>
+					<td class="driver_class">0</td>
+					<td>Ricardo Semensato</td>
+					<td>Gorillas Racing B</td>
+					<td>90</td>
+					<td>RIC</td>
+					<td>32</td>
+					<td>52</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>5</td>
+					<td class="driver_class">0</td>
+					<td>Ricardo Dias</td>
+					<td>Gorillas Racing A</td>
+					<td>55</td>
+					<td>RIC</td>
+					<td>20</td>
+					<td>50</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>6</td>
+					<td class="driver_class">0</td>
+					<td>Diego Delatorre</td>
+					<td>Thunderbolt Racers</td>
+					<td>93</td>
+					<td></td>
+					<td>32</td>
+					<td>48</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>7</td>
+					<td class="driver_class">0</td>
+					<td>Matheus Silva</td>
+					<td>Thunderbolt Racers</td>
+					<td>95</td>
+					<td></td>
+					<td>34</td>
+					<td>46</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>8</td>
+					<td class="driver_class">2</td>
+					<td>Matheus Garcia Barros</td>
+					<td>Speed Challengers</td>
+					<td>23</td>
+					<td></td>
+					<td>32</td>
+					<td>44</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>9</td>
+					<td class="driver_class">0</td>
+					<td>Irineu Eler</td>
+					<td>Racing Titans</td>
+					<td>448</td>
+					<td></td>
+					<td>34</td>
+					<td>42</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>10</td>
+					<td class="driver_class">2</td>
+					<td>Juan Martins</td>
+					<td>Juan Martins</td>
+					<td>12</td>
+					<td></td>
+					<td>32</td>
+					<td>40</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>11</td>
+					<td class="driver_class">0</td>
+					<td>Rodrigo Nunes Coneglian</td>
+					<td>Lightning Strikers</td>
+					<td>84</td>
+					<td></td>
+					<td>32</td>
+					<td>37</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>12</td>
+					<td class="driver_class">0</td>
+					<td>Jean Ferreira</td>
+					<td>Gorillas Racing B</td>
+					<td>888</td>
+					<td></td>
+					<td>30</td>
+					<td>36</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>13</td>
+					<td class="driver_class">0</td>
+					<td>Lucas Fachim</td>
+					<td>Eclipse Racers</td>
+					<td>73</td>
+					<td></td>
+					<td>25</td>
+					<td>35</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>14</td>
+					<td class="driver_class">0</td>
+					<td>Caio Rocha</td>
+					<td>Thunder Racers</td>
+					<td>65</td>
+					<td></td>
+					<td>34</td>
+					<td>34</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>15</td>
+					<td class="driver_class">0</td>
+					<td>Tharso Bersano</td>
+					<td>Nitro Chargers</td>
+					<td>78</td>
+					<td></td>
+					<td>32</td>
+					<td>33</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>16</td>
+					<td class="driver_class">0</td>
+					<td>Ronaldo Guillen</td>
+					<td>Speed Challengers</td>
+					<td>974</td>
+					<td></td>
+					<td>35</td>
+					<td>32</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>17</td>
+					<td class="driver_class">0</td>
+					<td>Rosemberg Lima</td>
+					<td>Turbo Legends</td>
+					<td>733</td>
+					<td>ROS</td>
+					<td>32</td>
+					<td>31</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>18</td>
+					<td class="driver_class">0</td>
+					<td>Julio Fabi</td>
+					<td>Flash Speedsters</td>
+					<td>72</td>
+					<td>JUL</td>
+					<td>32</td>
+					<td>30</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>19</td>
+					<td class="driver_class">0</td>
+					<td>Maganini Jr</td>
+					<td>Gorillas Racing A</td>
+					<td>63</td>
+					<td></td>
+					<td>35</td>
+					<td>29</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>20</td>
+					<td class="driver_class">0</td>
+					<td>Carlos Xavier</td>
+					<td>Turbo Legends</td>
+					<td>168</td>
+					<td>CAR</td>
+					<td>32</td>
+					<td>28</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>21</td>
+					<td class="driver_class">0</td>
+					<td>Gustavo Gobi Rosales</td>
+					<td>Thunderbolt Racers</td>
+					<td>69</td>
+					<td></td>
+					<td>35</td>
+					<td>25</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>22</td>
+					<td class="driver_class">0</td>
+					<td>Paulo Santos</td>
+					<td>Sonic Racers</td>
+					<td>20</td>
+					<td>PES</td>
+					<td>32</td>
+					<td>24</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>23</td>
+					<td class="driver_class">0</td>
+					<td>Matheus Nunes</td>
+					<td>Eclipse Racers</td>
+					<td>47</td>
+					<td>MAT</td>
+					<td>30</td>
+					<td>23</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>24</td>
+					<td class="driver_class">2</td>
+					<td>Rodrigo Forace</td>
+					<td>Flash Speedsters</td>
+					<td>8</td>
+					<td></td>
+					<td>34</td>
+					<td>22</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>25</td>
+					<td class="driver_class">2</td>
+					<td>Hugo Marcell</td>
+					<td>Sonic Racers</td>
+					<td>4</td>
+					<td>HUG</td>
+					<td>25</td>
+					<td>21</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>26</td>
+					<td class="driver_class">0</td>
+					<td>Daniel Franca</td>
+					<td>Eclipse Racers</td>
+					<td>77</td>
+					<td>FRA</td>
+					<td>32</td>
+					<td>20</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>27</td>
+					<td class="driver_class">0</td>
+					<td>Adriano Peixoto</td>
+					<td>Velocity Fusion</td>
+					<td>33</td>
+					<td></td>
+					<td>32</td>
+					<td>19</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>28</td>
+					<td class="driver_class">0</td>
+					<td>Gabriel Yuri</td>
+					<td>Gorillas Racing B</td>
+					<td>321</td>
+					<td></td>
+					<td>35</td>
+					<td>18</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>29</td>
+					<td class="driver_class">0</td>
+					<td>Marcos Rosa</td>
+					<td>Velocity Fusion</td>
+					<td>74</td>
+					<td></td>
+					<td>25</td>
+					<td>17</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>30</td>
+					<td class="driver_class">0</td>
+					<td>Guilherme Marques</td>
+					<td>Velocity Fusion</td>
+					<td>177</td>
+					<td></td>
+					<td>34</td>
+					<td>16</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>31</td>
+					<td class="driver_class">2</td>
+					<td>DICASF1</td>
+					<td>Thunder Racers</td>
+					<td>755</td>
+					<td>PLY</td>
+					<td>35</td>
+					<td>12</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>32</td>
+					<td class="driver_class">0</td>
+					<td>Aledesta Senna</td>
+					<td>Lightning Strikers</td>
+					<td>214</td>
+					<td>ALE</td>
+					<td>34</td>
+					<td>11</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>33</td>
+					<td class="driver_class">0</td>
+					<td>Rodrigo Soto</td>
+					<td>Team Velocity</td>
+					<td>277</td>
+					<td></td>
+					<td>20</td>
+					<td>10</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							
+				<tr>
+					<td class="driver_upd">&#9660;</td>
+					<td>34</td>
+					<td class="driver_class">2</td>
+					<td>Diego Brocca</td>
+					<td>Flash Speedsters</td>
+					<td>13</td>
+					<td></td>
+					<td>35</td>
+					<td>9</td>
+					<td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+                    <td class="driver_punishment"></td>
+				</tr>
+							</table>        <!--STOP-->
+    </div>
+    <script src="static/js/tables.js"></script>
+</body>
+</html>

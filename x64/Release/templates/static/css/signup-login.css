@@ -1,0 +1,87 @@
+/* Estilos para centralizar o conteúdo */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    text-align: center;
+}
+
+/* Estilos para os campos de formulário e botões */
+form {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+label {
+    text-align: left;  /* Alinhar os rótulos à esquerda */
+    display: block;    /* Garante que cada rótulo apareça em uma nova linha */
+    margin-bottom: 5px; /* Adiciona um pequeno espaçamento abaixo de cada rótulo */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button.login, button.realizarcadastro {
+    padding: 15px 70px;        /* Mantendo o botão de login mais fino */
+    background-color: #2b23c4; /* Mudando para a cor desejada */
+    color: white;
+    border: none;
+    border-radius: 3px;        /* Aumentando a borda dos botões */
+    cursor: pointer;
+    margin-top: 40px;          /* Aumentando a distância entre os botões e os campos */
+    font-size: 100%;
+}
+
+button.cadastro {
+    padding: 15px;                 /* Ajustando o padding */
+    background-color: transparent; /* Removendo o background */
+    color: #2b23c4;                /* Mudando a cor do texto */
+    border: none;
+    border-radius: 3px;            /* Aumentando a borda */
+    cursor: pointer;
+    text-decoration: underline;    /* Adicionando sublinhado */
+    margin-top: 20px;
+    font-size: 100%;
+}
+
+.login {
+    text-align: center; /* Centralizar o conteúdo da div */
+}
+
+/* Estilos para a imagem do logotipo */
+#logotipo {
+    max-width: 8%; /* Garante que a imagem não ultrapasse a largura do container */
+    margin-top: 10px; /* Espaço acima da imagem */
+}
+
+/* Estilos do campo dos estados*/
+select {
+    width: 100%; /* Faz com que todos ocupem 100% da largura disponível */
+    padding: 10px; /* Adiciona preenchimento interno para melhor aparência */
+    box-sizing: border-box; /* Garante que a largura inclui preenchimento e borda */
+    margin-bottom: 10px; /* Adiciona espaço entre os campos */
+}
+
+.double_field {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para ocultar o formulário de registro inicialmente */
+.registro {
+    display: none;
+}
