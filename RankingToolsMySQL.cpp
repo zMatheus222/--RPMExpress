@@ -14,6 +14,7 @@ void MySQL::update_geral_ranking() {
 		vector<string> schemas = list_schemas(regex("T\\d{1,3}"));
 
 		for (const auto& schema : schemas) {
+
 			Exlog(AMARELO + __func__, BRANCO + "schema: " + CIANO + schema);
 
 			con->setSchema(schema); Exlog(AMARELO + __func__, BRANCO + "getSchema on: " + CIANO + con->getSchema().asStdString());

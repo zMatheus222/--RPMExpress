@@ -16,11 +16,11 @@
     <Filter Include="Source Files\RankingTools">
       <UniqueIdentifier>{e9e2f9e5-da99-4402-a44f-6185a87b2bdf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\DefaultFunctions">
-      <UniqueIdentifier>{552ca7f6-b30d-4c5e-a2d2-5a5cfce01593}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\AnalysisTools">
       <UniqueIdentifier>{6965493c-fa28-4b6c-963b-7de7b8e92bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AnalysisTools\DefaultFunctions">
+      <UniqueIdentifier>{552ca7f6-b30d-4c5e-a2d2-5a5cfce01593}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,7 +31,7 @@
       <Filter>Source Files\AnalysisTools</Filter>
     </ClCompile>
     <ClCompile Include="default_functions.cpp">
-      <Filter>Source Files\DefaultFunctions</Filter>
+      <Filter>Source Files\AnalysisTools\DefaultFunctions</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
@@ -56,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="RPM-DownloaderMySQL.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralRoutes.cpp">
+      <Filter>Source Files\AnalysisTools\DefaultFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="RankingToolsRoutes.cpp">
+      <Filter>Source Files\RankingTools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

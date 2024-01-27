@@ -134,12 +134,14 @@
     <ClCompile Include="AnalysisTools.cpp" />
     <ClCompile Include="default_functions.cpp" />
     <ClCompile Include="DiscordBot.cpp" />
+    <ClCompile Include="GeneralRoutes.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DefaultFunctionsMySQL.cpp" />
     <ClCompile Include="AnalysisRoutes.cpp" />
     <ClCompile Include="RankingToolsMain.cpp" />
     <ClCompile Include="AnalysisToolsMySQL.cpp" />
     <ClCompile Include="RankingToolsMySQL.cpp" />
+    <ClCompile Include="RankingToolsRoutes.cpp" />
     <ClCompile Include="RPM-Downloader.cpp" />
     <ClCompile Include="RPM-DownloaderMySQL.cpp" />
   </ItemGroup>
