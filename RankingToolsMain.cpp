@@ -28,8 +28,6 @@ using namespace Ranking_Tools;
 #define lapCount    RankingJson["sessionResult"]["leaderBoardLines"][i]["timing"]["lapCount"]
 
 
-//#include <boost/locale/encoding_utf.hpp>
-
 using namespace TXT_Style;
 using namespace MySQL;
 using namespace std;
@@ -56,7 +54,7 @@ struct compare {
 
 string remover_acentuacao(string* file_data) {
 
-	Exlog(MAGENTA + __func__, StartMsg);
+	Exlog("INFO", MAGENTA + __func__, StartMsg);
 
 	string fixed_data;
 
@@ -94,14 +92,14 @@ string remover_acentuacao(string* file_data) {
 
 	}
 
-	Exlog(MAGENTA + __func__, EndMsg);
+	Exlog("INFO", MAGENTA + __func__, EndMsg);
 
 	return fixed_data;
 }
 
 std::string convertUTF16LEtoUTF8(const std::wstring& utf16Content) {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
     std::string utf8Content;
     bool start_process = false;
@@ -141,18 +139,18 @@ std::string convertUTF16LEtoUTF8(const std::wstring& utf16Content) {
         }
     }
 
-	Exlog(AMARELO + __func__, VERDE + "wstring convertida para string com sucesso.");
+	Exlog("INFO", AMARELO + __func__, VERDE + "wstring convertida para string com sucesso.");
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
     return utf8Content;
 }
 
 map<string, string> getDetailsByFile(string *file_name) {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
-	Exlog(AMARELO + __func__, BRANCO + "file_name: " + CIANO + *file_name);
+	Exlog("INFO", AMARELO + __func__, BRANCO + "file_name: " + CIANO + *file_name);
 
 	map<string, string> DetailsByFile;
 
@@ -160,7 +158,7 @@ map<string, string> getDetailsByFile(string *file_name) {
 
 	if (regex_search(*file_name, sma, regex("(T[0-9]+)\\_(E[0-9]+)\\_([0-9]{2})([0-9]{2})([0-9]{2})\\_([0-9]{2})([0-9]{2})([0-9]{2})\\_R([0-9]+)?.+"))) {
 
-		Exlog(AMARELO + __func__, BRANCO + "sma.size(): " + CIANO + to_string(sma.size()));
+		Exlog("INFO", AMARELO + __func__, BRANCO + "sma.size(): " + CIANO + to_string(sma.size()));
 
 		DetailsByFile["Season"] = sma[1]; DetailsByFile["stage"] = sma[2];
 		DetailsByFile["year"] =   sma[3]; DetailsByFile["month"] = sma[4];
@@ -175,10 +173,10 @@ map<string, string> getDetailsByFile(string *file_name) {
 
 	}
 	else {
-		Exlog(AMARELO + __func__, VERMELHO + "Não foi possível encontrar a season do arquivo: " + *file_name);
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "Não foi possível encontrar a season do arquivo: " + *file_name);
 	}
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
 	return DetailsByFile;
 
@@ -186,30 +184,30 @@ map<string, string> getDetailsByFile(string *file_name) {
 
 void update_backend_table(vector<string>& new_ranking_files) {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	//fazer varredura em todos os arquivos .json da pasta
 	//vector<string> ranking_files = Directories::list_files(Directories::results_dir.c_str(), true);
 
-	Exlog(AMARELO + __func__, VERDE + "Arquivos recebidos: " + to_string(new_ranking_files.size()));
+	Exlog("INFO", AMARELO + __func__, VERDE + "Arquivos recebidos: " + to_string(new_ranking_files.size()));
 
 	//loop de verificação em cada arquivo encontrado
 	
 	for (const auto& current_file : new_ranking_files) {
 		
 		//Abrir arquivo e buscar no nome do servidor a temporada e etapa
-		Exlog(AMARELO + __func__, "to_import_wfile: " + current_file);
+		Exlog("INFO", AMARELO + __func__, "to_import_wfile: " + current_file);
 
 		wstring json_full = Directories::import_wfile(Directories::results_dir.c_str() + string("/") + current_file);
-		Exlog(AMARELO + __func__, VERDE + "Arquivo importado com sucesso. (wstring json_full ready)");
+		Exlog("INFO", AMARELO + __func__, VERDE + "Arquivo importado com sucesso. (wstring json_full ready)");
 		
 		string file_data = convertUTF16LEtoUTF8(json_full);
-		Exlog(AMARELO + __func__, VERDE + "Arquivo convertido para string com sucesso. (string file_data ready)");
+		Exlog("INFO", AMARELO + __func__, VERDE + "Arquivo convertido para string com sucesso. (string file_data ready)");
 
 		file_data = remover_acentuacao(&file_data);
 		
 		json RankingJson = json::parse(file_data);
-		Exlog(AMARELO + __func__, VERDE + "Arquivo convertido para json com sucesso (json RankingJson ready)");
+		Exlog("INFO", AMARELO + __func__, VERDE + "Arquivo convertido para json com sucesso (json RankingJson ready)");
 
 		string fileName = current_file;
 		const string serverName = RankingJson["serverName"];
@@ -222,14 +220,14 @@ void update_backend_table(vector<string>& new_ranking_files) {
 		//montar o nome da table
 		string tableName = DetailsByFile["stage"] + "_" + trackName + "_" + sessionType;
 
-		Exlog(VERDE + __func__, BRANCO + "to_search_in_rpm_base: " + CIANO + DetailsByFile["Season"] + BRANCO + " | " + CIANO + tableName + BRANCO + " | " + CIANO + QueryResultValues);
+		Exlog("INFO", VERDE + __func__, BRANCO + "to_search_in_rpm_base: " + CIANO + DetailsByFile["Season"] + BRANCO + " | " + CIANO + tableName + BRANCO + " | " + CIANO + QueryResultValues);
 
 		//verificar se o schema atual existe
 		Directories::search_in_rpm_base(DetailsByFile["Season"], tableName, QueryResultValues);
 
 		if (!MySQL::verify_existing_content(DetailsByFile["Season"], tableName)) {
 
-			Exlog(AMARELO + __func__, VERDE + "Dados não existentes. na table: " + CIANO + tableName);
+			Exlog("INFO", AMARELO + __func__, VERDE + "Dados não existentes. na table: " + CIANO + tableName);
 		
 			//export_file(&file_data, current_file);
 
@@ -263,7 +261,7 @@ void update_backend_table(vector<string>& new_ranking_files) {
 				}
 
 				//montar o multiplicador de pontos
-				double Multiplier = Directories::championship_configs["ScoreMultiplier"][DetailsByFile["StageBatery"]]; Exlog(AMARELO + __func__, VERDE + "Multiplier: " + CIANO + to_string(Multiplier));
+				double Multiplier = Directories::championship_configs["ScoreMultiplier"][DetailsByFile["StageBatery"]]; Exlog("INFO", AMARELO + __func__, VERDE + "Multiplier: " + CIANO + to_string(Multiplier));
 
 				moreData.push_back(to_string(Pontos * Multiplier));
 
@@ -301,7 +299,7 @@ void update_backend_table(vector<string>& new_ranking_files) {
 				tableData.insert(make_pair("totalTime", to_string(it->first.second)));
 				tableData.insert(make_pair("Pontos", it->second[12]));
 
-				Exlog(VERDE + __func__, BRANCO + "size before insert_on_results_table: " + CIANO + to_string(tableData.size()));
+				Exlog("INFO", VERDE + __func__, BRANCO + "size before insert_on_results_table: " + CIANO + to_string(tableData.size()));
 
 				MySQL::insert_on_results_table(tableData);
 
@@ -309,15 +307,15 @@ void update_backend_table(vector<string>& new_ranking_files) {
 
 			}
 
-			Exlog(AMARELO + __func__, VERDE + "Dados inseridos com sucesso na table: " + CIANO + tableName);
+			Exlog("INFO", AMARELO + __func__, VERDE + "Dados inseridos com sucesso na table: " + CIANO + tableName);
 		}
 		else {
-			Exlog(AMARELO + __func__, AMARELO + "Dados já existentes. na table: " + CIANO + tableName);
+			Exlog("INFO", AMARELO + __func__, AMARELO + "Dados já existentes. na table: " + CIANO + tableName);
 		}	
 
 	}
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
 }
 
@@ -339,14 +337,14 @@ void update_frontend_table() {
 			
 			//quando chegar na parte do codigo com STOP1 pausa a importação
 			if (regex_search(line, regex(".+START[0-9]+.+"))) {
-				Exlog(AMARELO + __func__, VERDE + line);
+				Exlog("INFO", AMARELO + __func__, VERDE + line);
 				//pegamos as informações do banco de dados para criar um codigo html
 				table_html += MySQL::results_html_fill(schemas, line.c_str());
 				STOP = true;
 			}
 			//quando chegar na parte do codigo com STOP2 volta a permitir a importação
 			else if (regex_search(line, regex("--STOP--"))) {
-				Exlog(AMARELO + __func__, VERDE + "<!--STOP-->");
+				Exlog("INFO", AMARELO + __func__, VERDE + "<!--STOP-->");
 				STOP = false;
 			}
 			//salva as linhas do html quando permitido
@@ -361,20 +359,20 @@ void update_frontend_table() {
 
 		html_out << table_html;
 		
-		//Exlog(AMARELO + __func__, "Arquivo html: " + table_html);
+		//Exlog("INFO", AMARELO + __func__, "Arquivo html: " + table_html);
 
-		Exlog(AMARELO + __func__, VERDE + "Arquivo html atualizado com sucesso.");
+		Exlog("INFO", AMARELO + __func__, VERDE + "Arquivo html atualizado com sucesso.");
 
 		html_out.close();
 	}
 	catch (const std::exception& e) {
 		// Captura exceções do tipo std::exception (ou suas derivadas)
-		Exlog(AMARELO + __func__, VERMELHO + "Erro durante a chamada de update_show[2args]: " + e.what());
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "Erro durante a chamada de update_show[2args]: " + e.what());
 	}
 
 }
 
-void rankingFileDetector() { Exlog(AMARELO + __func__, StartMsg);
+void rankingFileDetector() { Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	int resultFileCount = 0;
 	int lastRankingFileCount = 0;
@@ -383,7 +381,7 @@ void rankingFileDetector() { Exlog(AMARELO + __func__, StartMsg);
 		//fazer varredura em todos os arquivos .json da pasta
 		vector<string> ranking_files = Directories::list_files(Directories::results_dir.c_str(), true);
 
-		//Exlog(AMARELO + __func__, VERDE + "Arquivos encontrados: " + to_string(ranking_files.size()));
+		//Exlog("INFO", AMARELO + __func__, VERDE + "Arquivos encontrados: " + to_string(ranking_files.size()));
 
 		//loop de verificação em cada arquivo encontrado
 
@@ -392,27 +390,27 @@ void rankingFileDetector() { Exlog(AMARELO + __func__, StartMsg);
 		
 		for (const auto& current_file : ranking_files) { 
 			
-			//Exlog(AMARELO + __func__, "to_import_wfile: " + current_file);
+			//Exlog("INFO", AMARELO + __func__, "to_import_wfile: " + current_file);
 
 			if (regex_search(current_file, regex("T[0-9]+_E[0-9]+_\\w+_R[0-9]?.json"))) {
 
 				resultFileCount++;
 
 				if (resultFileCount > lastRankingFileCount) {
-					Exlog(AMARELO + __func__, VERDE + "Inserindo novo arquivo de resultado ao vector.");
+					Exlog("INFO", AMARELO + __func__, VERDE + "Inserindo novo arquivo de resultado ao vector.");
 					new_ranking_files.push_back(current_file);
 				}
 			}
 
 		}
 
-		//Exlog(AMARELO + __func__, VERDE + "[resultFileCount]: " + to_string(resultFileCount)); Exlog(AMARELO + __func__, VERDE + "[lastRankingFileCount]: " + to_string(lastRankingFileCount));
+		//Exlog("INFO", AMARELO + __func__, VERDE + "[resultFileCount]: " + to_string(resultFileCount)); Exlog("INFO", AMARELO + __func__, VERDE + "[lastRankingFileCount]: " + to_string(lastRankingFileCount));
 
 		if (resultFileCount > lastRankingFileCount) {
 
-			Exlog(AMARELO + __func__, VERDE + "Novos arquivos de resultado encontrados:");
+			Exlog("INFO", AMARELO + __func__, VERDE + "Novos arquivos de resultado encontrados:");
 			for (auto& rf : new_ranking_files) {
-				Exlog(AMARELO + __func__, BRANCO + "-> ranking_files: " + rf);
+				Exlog("INFO", AMARELO + __func__, BRANCO + "-> ranking_files: " + rf);
 			}
 
 			update_backend_table(new_ranking_files);
@@ -423,9 +421,9 @@ void rankingFileDetector() { Exlog(AMARELO + __func__, StartMsg);
 
 		lastRankingFileCount = resultFileCount;
 
-		//Exlog(AMARELO + __func__, VERDE + "[resultFileCount]: " + to_string(resultFileCount));
-		//Exlog(AMARELO + __func__, VERDE + "[lastRankingFileCount]: " + to_string(lastRankingFileCount));
-		//Exlog(AMARELO + __func__, VERDE + "Aguardando 15 segundos para nova verificação.");
+		//Exlog("INFO", AMARELO + __func__, VERDE + "[resultFileCount]: " + to_string(resultFileCount));
+		//Exlog("INFO", AMARELO + __func__, VERDE + "[lastRankingFileCount]: " + to_string(lastRankingFileCount));
+		//Exlog("INFO", AMARELO + __func__, VERDE + "Aguardando 15 segundos para nova verificação.");
 
 		Directories::RankingToolsOnEnd = true;
 

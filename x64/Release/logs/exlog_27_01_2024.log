@@ -1,0 +1,2565 @@
+[INFO][import_file] Started!
+
+[INFO][import_file] Arquivo do tipo: json | D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release/templates/championship_configs.json importado som sucesso.
+
+[INFO][import_file] Criando par de dados para retorno.
+
+[INFO][import_file] Ended!
+
+[INFO][MySQL::Connect] Started!
+
+[INFO][MySQL::Connect] Logado com sucesso no banco de dados MySQL!
+
+[INFO][MySQL::Connect] Ended!
+
+[INFO][registerAllDrivers] Started!
+
+[INFO][create_schema] Started!
+
+[INFO][create_schema] Created Schema: RPM_Drivers
+
+[INFO][create_schema] Ended!
+
+[INFO][registerAllDrivers] Criado Schema: RPM_Drivers
+
+[INFO][create_table] Started!
+
+[INFO][create_table] table_index: id serial PRIMARY KEY, playerId VARCHAR(30), shortName VARCHAR(4), firstName VARCHAR(25), lastName VARCHAR(25), teamName VARCHAR(35), lastSeason VARCHAR(3)
+
+[INFO][create_table] getSchema on: RPM_Drivers
+
+[INFO][create_table] Created Statement (stmt)
+
+[INFO][create_table] Created table: All_Drivers
+
+[INFO][create_table] Ended!
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][registerAllDrivers] current_schema: T22
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][registerAllDrivers] current_table: E1_kyalami_R
+
+[INFO][registerAllDrivers] getSchema on: T22
+
+[INFO][registerAllDrivers] Preparando Statment (pstmt): SELECT playerId, shortName, firstName, lastName, teamName FROM E1_kyalami_R Schema: T22
+
+[INFO][registerAllDrivers] Realizando SELECT na table E1_kyalami_R da temporada atual.
+
+[INFO][registerAllDrivers] Query on Schema: T22 (pstmt): SELECT playerId, shortName, firstName, lastName, teamName FROM E1_kyalami_R
+
+[INFO][registerAllDrivers] driverData.size(): 34
+
+[INFO][insertAllDriversOnMySQL] Started!
+
+[INFO][insertAllDriversOnMySQL] Realizando setSchema em: RPM_Drivers
+
+[INFO][create_table] Started!
+
+[INFO][create_table] table_index: id serial PRIMARY KEY, playerId VARCHAR(30), shortName VARCHAR(4), firstName VARCHAR(25), lastName VARCHAR(25), teamName VARCHAR(35), lastSeason VARCHAR(3)
+
+[INFO][create_table] getSchema on: RPM_Drivers
+
+[INFO][create_table] Created Statement (stmt)
+
+[INFO][create_table] Created table: All_Drivers
+
+[INFO][create_table] Ended!
+
+[INFO][insertAllDriversOnMySQL] Preparando Statment (pstmt): INSERT INTO All_Drivers (playerId, shortName, firstName, lastName, teamName, lastSeason) SELECT ?,?,?,?,?,? WHERE NOT EXISTS(SELECT 1 FROM All_Drivers WHERE playerId = ? AND shortName = ? AND firstName = ? AND lastName = ? AND teamName = ? AND lastSeason = ?)
+
+[INFO][insertAllDriversOnMySQL] Realizando INSERT na table All_Drivers
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561197994172279
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Paulo Toledo
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing A
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198001297088
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Maganini Jr
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing A
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198009120418
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Diego Brocca
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Flash Speedsters
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198015329559
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Caio Rocha
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunder Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198023827631
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Raphael Souza
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunder Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198027218840
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: GAB
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Gabriel Felipe
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Turbo Legends
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198058207535
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: RIC
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Ricardo Semensato
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing B
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198076823340
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: ALE
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Aledesta Senna
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Lightning Strikers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198078869093
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Lucas Fachim
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Eclipse Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198087212555
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Tharso Bersano
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Nitro Chargers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198088926046
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Marcos Rosa
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Velocity Fusion
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198125230681
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: MAT
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Matheus Nunes
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Eclipse Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198141374072
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Gustavo Gobi Rosales
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunderbolt Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198154269416
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: RIC
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Ricardo Dias
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing A
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198192896005
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: PES
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Paulo Santos
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Sonic Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198196023401
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Irineu Eler
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Racing Titans
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198264151431
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: FRA
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Daniel Franca
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Eclipse Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198375495450
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Jean Ferreira
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing B
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198416857231
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rodrigo Nunes Coneglian
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Lightning Strikers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198540394923
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Matheus Silva
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunderbolt Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198889530134
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: HUG
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Hugo Marcell
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Sonic Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198907370528
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: CAR
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Carlos Xavier
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Turbo Legends
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198956570660
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Adriano Peixoto
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Velocity Fusion
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199050473010
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Diego Delatorre
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunderbolt Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199054865134
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: JUL
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Julio Fabi
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Flash Speedsters
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199073545642
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Guilherme Marques
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Velocity Fusion
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199103292023
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Ronaldo Guillen
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Speed Challengers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199133361667
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Gabriel Yuri
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing B
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199150359692
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Matheus Garcia Barros
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Speed Challengers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199217133438
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: PLY
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: ZACA
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: DICASF1
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunder Racers
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199230870139
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Juan Martins
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Juan Martins
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199259571766
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rodrigo Soto
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Team Velocity
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199471772201
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rodrigo Forace
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Flash Speedsters
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199512131607
+
+[INFO][insertAllDriversOnMySQL] driver.second[0]: ROS
+
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rosemberg Lima
+
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Turbo Legends
+
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+
+[INFO][registerAllDrivers] Realizado insertAllDriversOnMySQL:
+
+
+[INFO][registerAllDrivers] driver.first: S76561197994172279
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Paulo Toledo
+
+[INFO][registerAllDrivers] data: Gorillas Racing A
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198001297088
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Maganini Jr
+
+[INFO][registerAllDrivers] data: Gorillas Racing A
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198009120418
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Diego Brocca
+
+[INFO][registerAllDrivers] data: Flash Speedsters
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198015329559
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Caio Rocha
+
+[INFO][registerAllDrivers] data: Thunder Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198023827631
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Raphael Souza
+
+[INFO][registerAllDrivers] data: Thunder Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198027218840
+
+[INFO][registerAllDrivers] data: GAB
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Gabriel Felipe
+
+[INFO][registerAllDrivers] data: Turbo Legends
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198058207535
+
+[INFO][registerAllDrivers] data: RIC
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Ricardo Semensato
+
+[INFO][registerAllDrivers] data: Gorillas Racing B
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198076823340
+
+[INFO][registerAllDrivers] data: ALE
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Aledesta Senna
+
+[INFO][registerAllDrivers] data: Lightning Strikers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198078869093
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Lucas Fachim
+
+[INFO][registerAllDrivers] data: Eclipse Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198087212555
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Tharso Bersano
+
+[INFO][registerAllDrivers] data: Nitro Chargers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198088926046
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Marcos Rosa
+
+[INFO][registerAllDrivers] data: Velocity Fusion
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198125230681
+
+[INFO][registerAllDrivers] data: MAT
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Matheus Nunes
+
+[INFO][registerAllDrivers] data: Eclipse Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198141374072
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Gustavo Gobi Rosales
+
+[INFO][registerAllDrivers] data: Thunderbolt Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198154269416
+
+[INFO][registerAllDrivers] data: RIC
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Ricardo Dias
+
+[INFO][registerAllDrivers] data: Gorillas Racing A
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198192896005
+
+[INFO][registerAllDrivers] data: PES
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Paulo Santos
+
+[INFO][registerAllDrivers] data: Sonic Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198196023401
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Irineu Eler
+
+[INFO][registerAllDrivers] data: Racing Titans
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198264151431
+
+[INFO][registerAllDrivers] data: FRA
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Daniel Franca
+
+[INFO][registerAllDrivers] data: Eclipse Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198375495450
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Jean Ferreira
+
+[INFO][registerAllDrivers] data: Gorillas Racing B
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198416857231
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Rodrigo Nunes Coneglian
+
+[INFO][registerAllDrivers] data: Lightning Strikers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198540394923
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Matheus Silva
+
+[INFO][registerAllDrivers] data: Thunderbolt Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198889530134
+
+[INFO][registerAllDrivers] data: HUG
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Hugo Marcell
+
+[INFO][registerAllDrivers] data: Sonic Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198907370528
+
+[INFO][registerAllDrivers] data: CAR
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Carlos Xavier
+
+[INFO][registerAllDrivers] data: Turbo Legends
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561198956570660
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Adriano Peixoto
+
+[INFO][registerAllDrivers] data: Velocity Fusion
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199050473010
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Diego Delatorre
+
+[INFO][registerAllDrivers] data: Thunderbolt Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199054865134
+
+[INFO][registerAllDrivers] data: JUL
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Julio Fabi
+
+[INFO][registerAllDrivers] data: Flash Speedsters
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199073545642
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Guilherme Marques
+
+[INFO][registerAllDrivers] data: Velocity Fusion
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199103292023
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Ronaldo Guillen
+
+[INFO][registerAllDrivers] data: Speed Challengers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199133361667
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Gabriel Yuri
+
+[INFO][registerAllDrivers] data: Gorillas Racing B
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199150359692
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Matheus Garcia Barros
+
+[INFO][registerAllDrivers] data: Speed Challengers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199217133438
+
+[INFO][registerAllDrivers] data: PLY
+
+[INFO][registerAllDrivers] data: ZACA
+
+[INFO][registerAllDrivers] data: DICASF1
+
+[INFO][registerAllDrivers] data: Thunder Racers
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199230870139
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Juan Martins
+
+[INFO][registerAllDrivers] data: Juan Martins
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199259571766
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Rodrigo Soto
+
+[INFO][registerAllDrivers] data: Team Velocity
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199471772201
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Rodrigo Forace
+
+[INFO][registerAllDrivers] data: Flash Speedsters
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][registerAllDrivers] driver.first: S76561199512131607
+
+[INFO][registerAllDrivers] data: ROS
+
+[INFO][registerAllDrivers] data: 
+
+[INFO][registerAllDrivers] data: Rosemberg Lima
+
+[INFO][registerAllDrivers] data: Turbo Legends
+
+[INFO][registerAllDrivers] data: T22
+
+[INFO][main] All drivers registered!
+
+[INFO][discord_messenger] Started!
+
+[INFO][discord_messenger] Token: MTE3NDQ1Njk3NDk4MTczODUwNw.GP8j_4.82jO33zDijXVE_ZOD2HY_ujUNv6XTbONVDUPVo
+
+[INFO][discord_messenger] --> Discord Messenger Inicializado.
+
+[ERROR][discord_messenger] Erro: Invalid bot token (401: Unauthorized when getting gateway shard count)
+
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+
+[INFO][update_analysis_show] Started!
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][update_analysis_show] Passed first for...
+
+[INFO][update_analysis_show] Calling analysis_html_fill | line.c_str:     <!--START1-->
+
+[INFO][analysis_html_fill] Started!
+
+[INFO][analysis_html_fill] START ==     <!--START1-->
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][analysis_html_fill] AnalysisBase size: 1
+
+[INFO][analysis_html_fill] Entered on big for, schema.first: T22
+
+[INFO][analysis_html_fill] Preparando Statment (pstmt): SELECT * FROM GeneralAnalysis;
+
+[INFO][analysis_html_fill] Query on Schema: T22 (pstmt): SELECT * FROM: GeneralAnalysis
+
+[INFO][validate_link] Started!
+
+[INFO][validate_link] Received a valid url
+
+[INFO][validate_link] Started!
+
+[INFO][validate_link] Received a valid url
+
+[INFO][validate_link] Started!
+
+[INFO][validate_link] Ended!
+
+[INFO][analysis_html_fill] Ended!
+
+[INFO][update_analysis_show] Calling analysis_html_fill | line.c_str:                 <!--START2-->
+
+[INFO][analysis_html_fill] Started!
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][analysis_html_fill] Ended!
+
+[INFO][update_analysis_show] Calling analysis_html_fill | line.c_str:                 <!--START3-->
+
+[INFO][analysis_html_fill] Started!
+
+[INFO][analysis_html_fill] getSchema on: RPM_Drivers
+
+[INFO][analysis_html_fill] Ended!
+
+[INFO][update_analysis_show] html_out << table_html : concluded.
+
+[INFO][update_analysis_show] Ended!
+
+[INFO][update_analysisRequest_show] Started!
+
+[INFO][update_analysisRequest_show] Calling analysisRequest_html_fill | line.c_str:                         <!--START1-->
+
+[INFO][analysisRequest_html_fill] Started!
+
+[INFO][analysisRequest_html_fill] START ==                         <!--START1-->
+
+[INFO][analysisRequest_html_fill] Preparando Statment (pstmt): SELECT * FROM All_Drivers;
+
+[INFO][analysisRequest_html_fill] Piloto Paulo Toledo n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Carlos Pop√≥ n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Diego Brocca n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Marcus Bertaglia n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gustavo Dan n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Raphael Fonseca n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ricardo Brito n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rolf Campos n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Magno Fahel n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ricardo Semensato n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ramires Fischer n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Mauro Oliveira n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Henrique Lustosa n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Alexandre Almeida n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rick Teodoro n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Lucas Fachin n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Tharso Bersano n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Pedro Americo n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Guilherme Castro Oliveira n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Thiago Moura n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Stenio Zimermann n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Dimitri Menezes n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Mateus Dazgata n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Wendel George n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Luan Costa n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gustavo Gobi n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Samuel n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Pastorini n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Irineu Eler n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Andr√© Massari n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Camila Fernandes n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Jean Ferreira n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodi Nunes n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Silva n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Marcio Alves n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Edimar Cardoso n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Flavio Hulk n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Carlos Xavier n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Michael Filgueira  n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Skalecki n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Robert Lewandowsk n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Erisson Borge n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Diego Delatorre n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Julio Fabi n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Leo Sava n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Welton Gon√ßalves n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Yuri n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Job lima  n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Wellington Aleixo n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Oque Katagrama n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Zaca DicasF1 n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Soto n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Jonathan Miquelote n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Max Silva n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Forace n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Wesley Santos n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto NUNES n„o È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Penna È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto da Silva È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rocha È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Fonseca È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Mafra | B-Side È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Wall | B-Side È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Semensato È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Fischer È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Zani È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Bersano È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rosa È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto moura È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Mota È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Queiroz È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Dazgata È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ramos È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Dias È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ribeiro È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Fran√ßa È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Bueno È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Sales È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto RODI È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Correia È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto PEIXOTO È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Yuri È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto racing mg È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto DICASF1 È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Soto È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto cariok br È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Martins È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Paulo Toledo È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Maganini Jr È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Diego Brocca È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Caio Rocha È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Raphael Souza È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Felipe È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ricardo Semensato È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Aledesta Senna È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Lucas Fachim È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Tharso Bersano È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Marcos Rosa È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Nunes È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gustavo Gobi Rosales È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ricardo Dias È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Santos GRT È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Irineu Eler È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Daniel Frana a È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Jean Ferreira È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Nunes Coneglian È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Silva È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Hugo Marcell È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Carlos Xavier È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Adriano Peixoto È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Diego Delatorre È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Julio Fabi È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Guilherme Marques È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ronaldo Guillen È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Yuri È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Garcia Barros È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Juan Martins È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Soto È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Forace È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rosemberg Lima È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Paulo Toledo È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Maganini Jr È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Diego Brocca È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Caio Rocha È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Raphael Souza È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Felipe È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ricardo Semensato È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Aledesta Senna È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Lucas Fachim È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Tharso Bersano È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Marcos Rosa È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Nunes È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gustavo Gobi Rosales È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ricardo Dias È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Paulo Santos È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Irineu Eler È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Daniel Franca È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Jean Ferreira È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Nunes Coneglian È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Silva È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Hugo Marcell È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Carlos Xavier È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Adriano Peixoto È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Diego Delatorre È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Julio Fabi È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Guilherme Marques È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Ronaldo Guillen È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Gabriel Yuri È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Matheus Garcia Barros È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto DICASF1 È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Juan Martins È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Soto È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Forace È da temporada atual.
+
+[INFO][analysisRequest_html_fill] Piloto Rosemberg Lima È da temporada atual.
+
+[INFO][update_analysisRequest_show] Calling analysisRequest_html_fill | line.c_str:                     <!--START2-->
+
+[INFO][analysisRequest_html_fill] Started!
+
+[INFO][analysisRequest_html_fill] START ==                     <!--START2-->
+
+[INFO][update_analysisRequest_show] html_out << table_html : concluded.
+
+[INFO][update_analysisRequest_show] Ended!
+
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+
+[INFO][rankingFileDetector] Started!
+
+[INFO][rankingFileDetector] Inserindo novo arquivo de resultado ao vector.
+
+[INFO][rankingFileDetector] Novos arquivos de resultado encontrados:
+
+[INFO][rankingFileDetector] -> ranking_files: T22_E1_240125_005619_R.json
+
+[INFO][update_backend_table] Started!
+
+[INFO][update_backend_table] Arquivos recebidos: 1
+
+[INFO][update_backend_table] to_import_wfile: T22_E1_240125_005619_R.json
+
+[INFO][import_wfile] Started!
+
+[INFO][import_wfile] Arquivo do tipo: json | D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release/results/T22_E1_240125_005619_R.json importado som sucesso.
+
+[INFO][import_wfile] Ended!
+
+[INFO][update_backend_table] Arquivo importado com sucesso. (wstring json_full ready)
+
+[INFO][convertUTF16LEtoUTF8] Started!
+
+[INFO][convertUTF16LEtoUTF8] wstring convertida para string com sucesso.
+
+[INFO][convertUTF16LEtoUTF8] Ended!
+
+[INFO][update_backend_table] Arquivo convertido para string com sucesso. (string file_data ready)
+
+[INFO][remover_acentuacao] Started!
+
+[INFO][remover_acentuacao] Ended!
+
+[INFO][update_backend_table] Arquivo convertido para json com sucesso (json RankingJson ready)
+
+[INFO][getDetailsByFile] Started!
+
+[INFO][getDetailsByFile] file_name: T22_E1_240125_005619_R.json
+
+[INFO][getDetailsByFile] sma.size(): 10
+
+[INFO][getDetailsByFile] Ended!
+
+[INFO][update_backend_table] to_search_in_rpm_base: T22 | E1_kyalami_R | id serial PRIMARY KEY, playerId VARCHAR(30), cupCategory INT, raceNumber INT, shortName VARCHAR(4), firstName VARCHAR(30), lastName VARCHAR(30), teamName VARCHAR(30), carModel VARCHAR(25), lapCount INT, bestLap INT, totalTime INT, Punicao_Tempo INT, Punicao_Pontos INT, Punicoes_Adicionais VARCHAR(50), Pontos INT
+
+[INFO][search_in_rpm_base] Started!
+
+[INFO][search_in_rpm_base] Received values:
+
+[INFO][search_in_rpm_base] needed_schema: T22
+
+[INFO][search_in_rpm_base] needed_table: E1_kyalami_R
+
+[INFO][search_in_rpm_base] table_query: id serial PRIMARY KEY, playerId VARCHAR(30), cupCategory INT, raceNumber INT, shortName VARCHAR(4), firstName VARCHAR(30), lastName VARCHAR(30), teamName VARCHAR(30), carModel VARCHAR(25), lapCount INT, bestLap INT, totalTime INT, Punicao_Tempo INT, Punicao_Pontos INT, Punicoes_Adicionais VARCHAR(50), Pontos INT
+
+[INFO][search_in_rpm_base] needed_schema: T22
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][search_in_rpm_base] current_schema[0]: T22
+
+[INFO][search_in_rpm_base] founded_schema: 1
+
+[INFO][search_in_rpm_base] Schema T22 encontrado, salvando no map...
+
+[INFO][search_in_rpm_base] needed_table: E1_kyalami_R
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][search_in_rpm_base] current_table[0]: E1_kyalami_R
+
+[INFO][search_in_rpm_base] founded_table: 1
+
+[INFO][search_in_rpm_base] Table E1_kyalami_R encontrado, salvando no map...
+
+[INFO][verify_existing_content] Started!
+
+[INFO][verify_existing_content] Preparando Statment (pstmt): SELECT * FROM E1_kyalami_R;
+
+[INFO][verify_existing_content] Query on Schema: T22 (pstmt): SELECT * FROM: E1_kyalami_R
+
+[INFO][verify_existing_content] getString(1): 1
+
+[INFO][verify_existing_content] Existe conte˙do na table: E1_kyalami_R, Schema: T22
+
+[INFO][update_backend_table] Dados j· existentes. na table: E1_kyalami_R
+
+[INFO][update_backend_table] Ended!
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][update_frontend_table]                 <!--START1-->
+
+[INFO][results_html_fill] Started!
+
+[INFO][results_html_fill] START ==                 <!--START1-->
+
+[INFO][results_html_fill] current_schema: T22
+
+[INFO][update_frontend_table] <!--STOP-->
+
+[INFO][update_frontend_table]                     <!--START2-->
+
+[INFO][results_html_fill] Started!
+
+[INFO][results_html_fill] START ==                     <!--START2-->
+
+[INFO][results_html_fill] tables: 
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][results_html_fill] Entered on regex_search Tabela_Geral
+
+[INFO][results_html_fill] table: 
+
+[INFO][results_html_fill] html: 				<option class='table_dropdown' value='T22E1R'>E1 - kyalami</option>
+				<option class='table_dropdown' value='T22Tabela_Geral'>Tabela Geral</option>
+
+
+[INFO][update_frontend_table] <!--STOP-->
+
+[INFO][update_frontend_table]         <!--START3-->
+
+[INFO][results_html_fill] Started!
+
+[INFO][results_html_fill]         <!--START3-->
+
+[INFO][results_html_fill] getSchema on: T22
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][results_html_fill] current_table: Tabela_Geral
+
+[INFO][results_html_fill] Preparando Statment (pstmt): 
+	SELECT COALESCE(cupCategory, 0) as Classe,
+	COALESCE(raceNumber, 0) as Num,
+	COALESCE(shortName, "PLA") as Tag,
+	COALESCE(lastName, "none") as Nome,
+	COALESCE(teamName, "none") as Equipe,
+	COALESCE(carModel, "none") as Modelo,
+	COALESCE(Punicao_Tempo, 0) as Pun_Tempo,
+	COALESCE(Punicao_Pontos, 0) as Pun_Pontos,
+	COALESCE(Punicoes_Adicionais, 0) as Pun_Adicionais,
+	COALESCE(E1B1, 0) as E1B1,
+	COALESCE(E1B2, 0) as E1B2,
+	COALESCE(E2B1, 0) as E2B1,
+	COALESCE(E2B2, 0) as E2B2,
+	COALESCE(E3B1, 0) as E3B1,
+	COALESCE(E3B2, 0) as E3B2,
+	COALESCE(E4B1, 0) as E4B1,
+	COALESCE(E4B2, 0) as E4B2,
+	COALESCE(E5B1, 0) as E5B1,
+	COALESCE(E5B2, 0) as E5B2,
+	COALESCE(TotalPontos, 0) as Pontos
+	FROM T22.Tabela_Geral;
+
+
+[INFO][update_frontend_table] <!--STOP-->
+
+[INFO][update_frontend_table]         <!--START4-->
+
+[INFO][results_html_fill] Started!
+
+[INFO][results_html_fill]         <!--START4-->
+
+[INFO][results_html_fill] getSchema on: T22
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][results_html_fill] current_table: E1_kyalami_R
+
+[INFO][results_html_fill] Ended!
+
+[INFO][update_frontend_table] <!--STOP-->
+
+[INFO][update_frontend_table] Arquivo html atualizado com sucesso.
+
+[INFO][update_geral_ranking] Started!
+
+[INFO][list_schemas] Started!
+
+[INFO][list_schemas] Schema list:
+
+[INFO][list_schemas] Ended!
+
+[INFO][update_geral_ranking] schema: T22
+
+[INFO][update_geral_ranking] getSchema on: T22
+
+[INFO][create_table] Started!
+
+[INFO][create_table] table_index: playerId VARCHAR(30) PRIMARY KEY, cupCategory INT, raceNumber INT, shortName VARCHAR(4), firstName VARCHAR(30), lastName VARCHAR(30), teamName VARCHAR(30), carModel VARCHAR(25), lapCount INT, bestLap INT, totalTime INT, Punicao_Tempo INT, Punicao_Pontos INT, Punicoes_Adicionais VARCHAR(50), E1B1 INT, E1B2 INT, E2B1 INT, E2B2 INT, E3B1 INT, E3B2 INT, E4B1 INT, E4B2 INT, E5B1 INT, E5B2 INT, TotalPontos INT
+
+[INFO][create_table] getSchema on: T22
+
+[INFO][create_table] Created Statement (stmt)
+
+[INFO][create_table] Created table: Tabela_Geral
+
+[INFO][create_table] Ended!
+
+[INFO][update_geral_ranking] Tabela_Geral criada.
+
+[INFO][list_tables] Started!
+
+[INFO][list_tables] to_search: T22
+
+[INFO][list_tables] getSchema on: T22
+
+[INFO][list_tables] Tablelist:
+
+[INFO][list_tables] Listagem de tabelas concluida.
+
+[INFO][list_tables] Ended!
+
+[INFO][update_geral_ranking] current_table: E1_kyalami_R
+
+[INFO][update_geral_ranking] Ended!
+
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+
+[INFO][rpm_downloader] Started!
+
+[INFO][PickLink] getString: https://www.dropbox.com/scl/fi/ukwianbpekbsv50h51px9/Customs.7z?rlkey=wruzrd6e6rvka594j6fdwy1n7&dl=1
+
+[INFO][PickLink] getString: AC Competizione - SKIN-SET (Pacote de skins)
+
+[INFO][PickLink] getString: Diretorio de instalacao das skins no seu ACC:
+
+[INFO][PickLink] getString: https://www.dropbox.com/scl/fi/buyezeflfm93323h5q4hp/Daytona24_1_2v.7z?rlkey=et4npzicmgci7j8qcus907cub&dl=1
+
+[INFO][PickLink] getString: Assetto Corsa - Daytona Pack (LMDH + LMGT3)
+
+[INFO][PickLink] getString: Diretorio de instalacao do seu Assetto Corsa:
+
+[INFO][rpm_downloader] DownloaderBase update concluded
+
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+
+[INFO][main] All done! RPM Express Running!
+
+
+
+[INFO][import_file] Started!
+[INFO][import_file] Arquivo do tipo: json | D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release/templates/championship_configs.json importado som sucesso.
+[INFO][import_file] Criando par de dados para retorno.
+[INFO][import_file] Ended!
+[INFO][MySQL::Connect] Started!
+[INFO][MySQL::Connect] Logado com sucesso no banco de dados MySQL!
+[INFO][MySQL::Connect] Ended!
+[INFO][registerAllDrivers] Started!
+[INFO][create_schema] Started!
+[INFO][create_schema] Created Schema: RPM_Drivers
+[INFO][create_schema] Ended!
+[INFO][registerAllDrivers] Criado Schema: RPM_Drivers
+[INFO][create_table] Started!
+[INFO][create_table] table_index: id serial PRIMARY KEY, playerId VARCHAR(30), shortName VARCHAR(4), firstName VARCHAR(25), lastName VARCHAR(25), teamName VARCHAR(35), lastSeason VARCHAR(3)
+[INFO][create_table] getSchema on: RPM_Drivers
+[INFO][create_table] Created Statement (stmt)
+[INFO][create_table] Created table: All_Drivers
+[INFO][create_table] Ended!
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][registerAllDrivers] current_schema: T22
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][registerAllDrivers] current_table: E1_kyalami_R
+[INFO][registerAllDrivers] getSchema on: T22
+[INFO][registerAllDrivers] Preparando Statment (pstmt): SELECT playerId, shortName, firstName, lastName, teamName FROM E1_kyalami_R Schema: T22
+[INFO][registerAllDrivers] Realizando SELECT na table E1_kyalami_R da temporada atual.
+[INFO][registerAllDrivers] Query on Schema: T22 (pstmt): SELECT playerId, shortName, firstName, lastName, teamName FROM E1_kyalami_R
+[INFO][registerAllDrivers] driverData.size(): 34
+[INFO][insertAllDriversOnMySQL] Started!
+[INFO][insertAllDriversOnMySQL] Realizando setSchema em: RPM_Drivers
+[INFO][create_table] Started!
+[INFO][create_table] table_index: id serial PRIMARY KEY, playerId VARCHAR(30), shortName VARCHAR(4), firstName VARCHAR(25), lastName VARCHAR(25), teamName VARCHAR(35), lastSeason VARCHAR(3)
+[INFO][create_table] getSchema on: RPM_Drivers
+[INFO][create_table] Created Statement (stmt)
+[INFO][create_table] Created table: All_Drivers
+[INFO][create_table] Ended!
+[INFO][insertAllDriversOnMySQL] Preparando Statment (pstmt): INSERT INTO All_Drivers (playerId, shortName, firstName, lastName, teamName, lastSeason) SELECT ?,?,?,?,?,? WHERE NOT EXISTS(SELECT 1 FROM All_Drivers WHERE playerId = ? AND shortName = ? AND firstName = ? AND lastName = ? AND teamName = ? AND lastSeason = ?)
+[INFO][insertAllDriversOnMySQL] Realizando INSERT na table All_Drivers
+[INFO][insertAllDriversOnMySQL] driver.first: S76561197994172279
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Paulo Toledo
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing A
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198001297088
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Maganini Jr
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing A
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198009120418
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Diego Brocca
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Flash Speedsters
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198015329559
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Caio Rocha
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunder Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198023827631
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Raphael Souza
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunder Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198027218840
+[INFO][insertAllDriversOnMySQL] driver.second[0]: GAB
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Gabriel Felipe
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Turbo Legends
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198058207535
+[INFO][insertAllDriversOnMySQL] driver.second[0]: RIC
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Ricardo Semensato
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing B
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198076823340
+[INFO][insertAllDriversOnMySQL] driver.second[0]: ALE
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Aledesta Senna
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Lightning Strikers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198078869093
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Lucas Fachim
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Eclipse Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198087212555
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Tharso Bersano
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Nitro Chargers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198088926046
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Marcos Rosa
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Velocity Fusion
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198125230681
+[INFO][insertAllDriversOnMySQL] driver.second[0]: MAT
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Matheus Nunes
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Eclipse Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198141374072
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Gustavo Gobi Rosales
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunderbolt Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198154269416
+[INFO][insertAllDriversOnMySQL] driver.second[0]: RIC
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Ricardo Dias
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing A
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198192896005
+[INFO][insertAllDriversOnMySQL] driver.second[0]: PES
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Paulo Santos
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Sonic Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198196023401
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Irineu Eler
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Racing Titans
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198264151431
+[INFO][insertAllDriversOnMySQL] driver.second[0]: FRA
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Daniel Franca
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Eclipse Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198375495450
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Jean Ferreira
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing B
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198416857231
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rodrigo Nunes Coneglian
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Lightning Strikers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198540394923
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Matheus Silva
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunderbolt Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198889530134
+[INFO][insertAllDriversOnMySQL] driver.second[0]: HUG
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Hugo Marcell
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Sonic Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198907370528
+[INFO][insertAllDriversOnMySQL] driver.second[0]: CAR
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Carlos Xavier
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Turbo Legends
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561198956570660
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Adriano Peixoto
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Velocity Fusion
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199050473010
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Diego Delatorre
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunderbolt Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199054865134
+[INFO][insertAllDriversOnMySQL] driver.second[0]: JUL
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Julio Fabi
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Flash Speedsters
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199073545642
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Guilherme Marques
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Velocity Fusion
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199103292023
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Ronaldo Guillen
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Speed Challengers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199133361667
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Gabriel Yuri
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Gorillas Racing B
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199150359692
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Matheus Garcia Barros
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Speed Challengers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199217133438
+[INFO][insertAllDriversOnMySQL] driver.second[0]: PLY
+[INFO][insertAllDriversOnMySQL] driver.second[1]: ZACA
+[INFO][insertAllDriversOnMySQL] driver.second[2]: DICASF1
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Thunder Racers
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199230870139
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Juan Martins
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Juan Martins
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199259571766
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rodrigo Soto
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Team Velocity
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199471772201
+[INFO][insertAllDriversOnMySQL] driver.second[0]: 
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rodrigo Forace
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Flash Speedsters
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][insertAllDriversOnMySQL] driver.first: S76561199512131607
+[INFO][insertAllDriversOnMySQL] driver.second[0]: ROS
+[INFO][insertAllDriversOnMySQL] driver.second[1]: 
+[INFO][insertAllDriversOnMySQL] driver.second[2]: Rosemberg Lima
+[INFO][insertAllDriversOnMySQL] driver.second[3]: Turbo Legends
+[INFO][insertAllDriversOnMySQL] driver.second[4]: T22
+[INFO][insertAllDriversOnMySQL] Realizado Statement (pstmt).
+[INFO][registerAllDrivers] Realizado insertAllDriversOnMySQL:
+
+[INFO][registerAllDrivers] driver.first: S76561197994172279
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Paulo Toledo
+[INFO][registerAllDrivers] data: Gorillas Racing A
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198001297088
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Maganini Jr
+[INFO][registerAllDrivers] data: Gorillas Racing A
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198009120418
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Diego Brocca
+[INFO][registerAllDrivers] data: Flash Speedsters
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198015329559
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Caio Rocha
+[INFO][registerAllDrivers] data: Thunder Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198023827631
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Raphael Souza
+[INFO][registerAllDrivers] data: Thunder Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198027218840
+[INFO][registerAllDrivers] data: GAB
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Gabriel Felipe
+[INFO][registerAllDrivers] data: Turbo Legends
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198058207535
+[INFO][registerAllDrivers] data: RIC
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Ricardo Semensato
+[INFO][registerAllDrivers] data: Gorillas Racing B
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198076823340
+[INFO][registerAllDrivers] data: ALE
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Aledesta Senna
+[INFO][registerAllDrivers] data: Lightning Strikers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198078869093
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Lucas Fachim
+[INFO][registerAllDrivers] data: Eclipse Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198087212555
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Tharso Bersano
+[INFO][registerAllDrivers] data: Nitro Chargers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198088926046
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Marcos Rosa
+[INFO][registerAllDrivers] data: Velocity Fusion
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198125230681
+[INFO][registerAllDrivers] data: MAT
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Matheus Nunes
+[INFO][registerAllDrivers] data: Eclipse Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198141374072
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Gustavo Gobi Rosales
+[INFO][registerAllDrivers] data: Thunderbolt Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198154269416
+[INFO][registerAllDrivers] data: RIC
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Ricardo Dias
+[INFO][registerAllDrivers] data: Gorillas Racing A
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198192896005
+[INFO][registerAllDrivers] data: PES
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Paulo Santos
+[INFO][registerAllDrivers] data: Sonic Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198196023401
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Irineu Eler
+[INFO][registerAllDrivers] data: Racing Titans
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198264151431
+[INFO][registerAllDrivers] data: FRA
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Daniel Franca
+[INFO][registerAllDrivers] data: Eclipse Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198375495450
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Jean Ferreira
+[INFO][registerAllDrivers] data: Gorillas Racing B
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198416857231
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Rodrigo Nunes Coneglian
+[INFO][registerAllDrivers] data: Lightning Strikers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198540394923
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Matheus Silva
+[INFO][registerAllDrivers] data: Thunderbolt Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198889530134
+[INFO][registerAllDrivers] data: HUG
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Hugo Marcell
+[INFO][registerAllDrivers] data: Sonic Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198907370528
+[INFO][registerAllDrivers] data: CAR
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Carlos Xavier
+[INFO][registerAllDrivers] data: Turbo Legends
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561198956570660
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Adriano Peixoto
+[INFO][registerAllDrivers] data: Velocity Fusion
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199050473010
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Diego Delatorre
+[INFO][registerAllDrivers] data: Thunderbolt Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199054865134
+[INFO][registerAllDrivers] data: JUL
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Julio Fabi
+[INFO][registerAllDrivers] data: Flash Speedsters
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199073545642
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Guilherme Marques
+[INFO][registerAllDrivers] data: Velocity Fusion
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199103292023
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Ronaldo Guillen
+[INFO][registerAllDrivers] data: Speed Challengers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199133361667
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Gabriel Yuri
+[INFO][registerAllDrivers] data: Gorillas Racing B
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199150359692
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Matheus Garcia Barros
+[INFO][registerAllDrivers] data: Speed Challengers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199217133438
+[INFO][registerAllDrivers] data: PLY
+[INFO][registerAllDrivers] data: ZACA
+[INFO][registerAllDrivers] data: DICASF1
+[INFO][registerAllDrivers] data: Thunder Racers
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199230870139
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Juan Martins
+[INFO][registerAllDrivers] data: Juan Martins
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199259571766
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Rodrigo Soto
+[INFO][registerAllDrivers] data: Team Velocity
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199471772201
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Rodrigo Forace
+[INFO][registerAllDrivers] data: Flash Speedsters
+[INFO][registerAllDrivers] data: T22
+[INFO][registerAllDrivers] driver.first: S76561199512131607
+[INFO][registerAllDrivers] data: ROS
+[INFO][registerAllDrivers] data: 
+[INFO][registerAllDrivers] data: Rosemberg Lima
+[INFO][registerAllDrivers] data: Turbo Legends
+[INFO][registerAllDrivers] data: T22
+[INFO][main] All drivers registered!
+[INFO][discord_messenger] Started!
+[INFO][discord_messenger] Token: MTE3NDQ1Njk3NDk4MTczODUwNw.GP8j_4.82jO33zDijXVE_ZOD2HY_ujUNv6XTbONVDUPVo
+[INFO][discord_messenger] --> Discord Messenger Inicializado.
+[ERROR][discord_messenger] Erro: Invalid bot token (401: Unauthorized when getting gateway shard count)
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+[INFO][update_analysis_show] Started!
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][update_analysis_show] Passed first for...
+[INFO][update_analysis_show] Calling analysis_html_fill | line.c_str:     <!--START1-->
+[INFO][analysis_html_fill] Started!
+[INFO][analysis_html_fill] START ==     <!--START1-->
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][analysis_html_fill] AnalysisBase size: 1
+[INFO][analysis_html_fill] Entered on big for, schema.first: T22
+[INFO][analysis_html_fill] Preparando Statment (pstmt): SELECT * FROM GeneralAnalysis;
+[INFO][analysis_html_fill] Query on Schema: T22 (pstmt): SELECT * FROM: GeneralAnalysis
+[INFO][validate_link] Started!
+[INFO][validate_link] Received a valid url
+[INFO][validate_link] Started!
+[INFO][validate_link] Received a valid url
+[INFO][validate_link] Started!
+[INFO][validate_link] Ended!
+[INFO][analysis_html_fill] Ended!
+[INFO][update_analysis_show] Calling analysis_html_fill | line.c_str:                 <!--START2-->
+[INFO][analysis_html_fill] Started!
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][analysis_html_fill] Ended!
+[INFO][update_analysis_show] Calling analysis_html_fill | line.c_str:                 <!--START3-->
+[INFO][analysis_html_fill] Started!
+[INFO][analysis_html_fill] getSchema on: RPM_Drivers
+[INFO][analysis_html_fill] Ended!
+[INFO][update_analysis_show] html_out << table_html : concluded.
+[INFO][update_analysis_show] Ended!
+[INFO][update_analysisRequest_show] Started!
+[INFO][update_analysisRequest_show] Calling analysisRequest_html_fill | line.c_str:                         <!--START1-->
+[INFO][analysisRequest_html_fill] Started!
+[INFO][analysisRequest_html_fill] START ==                         <!--START1-->
+[INFO][analysisRequest_html_fill] Preparando Statment (pstmt): SELECT * FROM All_Drivers;
+[INFO][analysisRequest_html_fill] Piloto Paulo Toledo n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Carlos Pop√≥ n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Diego Brocca n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Marcus Bertaglia n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gustavo Dan n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Raphael Fonseca n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ricardo Brito n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rolf Campos n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Magno Fahel n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ricardo Semensato n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ramires Fischer n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Mauro Oliveira n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Henrique Lustosa n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Alexandre Almeida n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rick Teodoro n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Lucas Fachin n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Tharso Bersano n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Pedro Americo n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Guilherme Castro Oliveira n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Thiago Moura n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Stenio Zimermann n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Dimitri Menezes n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Mateus Dazgata n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Wendel George n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Luan Costa n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gustavo Gobi n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Samuel n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Pastorini n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Irineu Eler n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Andr√© Massari n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Camila Fernandes n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Jean Ferreira n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodi Nunes n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Silva n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Marcio Alves n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Edimar Cardoso n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Flavio Hulk n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Carlos Xavier n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Michael Filgueira  n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Skalecki n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Robert Lewandowsk n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Erisson Borge n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Diego Delatorre n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Julio Fabi n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Leo Sava n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Welton Gon√ßalves n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Yuri n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Job lima  n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Wellington Aleixo n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Oque Katagrama n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Zaca DicasF1 n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Soto n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Jonathan Miquelote n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Max Silva n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Forace n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Wesley Santos n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto NUNES n„o È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Penna È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto da Silva È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rocha È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Fonseca È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Mafra | B-Side È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Wall | B-Side È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Semensato È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Fischer È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Zani È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Bersano È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rosa È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto moura È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Mota È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Queiroz È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Dazgata È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ramos È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Dias È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ribeiro È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Fran√ßa È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Bueno È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Sales È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto RODI È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Correia È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto PEIXOTO È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Yuri È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto racing mg È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto DICASF1 È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Soto È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto cariok br È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Martins È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Paulo Toledo È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Maganini Jr È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Diego Brocca È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Caio Rocha È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Raphael Souza È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Felipe È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ricardo Semensato È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Aledesta Senna È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Lucas Fachim È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Tharso Bersano È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Marcos Rosa È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Nunes È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gustavo Gobi Rosales È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ricardo Dias È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Santos GRT È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Irineu Eler È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Daniel Frana a È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Jean Ferreira È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Nunes Coneglian È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Silva È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Hugo Marcell È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Carlos Xavier È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Adriano Peixoto È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Diego Delatorre È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Julio Fabi È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Guilherme Marques È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ronaldo Guillen È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Yuri È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Garcia Barros È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Juan Martins È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Soto È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Forace È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rosemberg Lima È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Paulo Toledo È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Maganini Jr È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Diego Brocca È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Caio Rocha È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Raphael Souza È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Felipe È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ricardo Semensato È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Aledesta Senna È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Lucas Fachim È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Tharso Bersano È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Marcos Rosa È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Nunes È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gustavo Gobi Rosales È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ricardo Dias È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Paulo Santos È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Irineu Eler È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Daniel Franca È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Jean Ferreira È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Nunes Coneglian È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Silva È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Hugo Marcell È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Carlos Xavier È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Adriano Peixoto È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Diego Delatorre È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Julio Fabi È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Guilherme Marques È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Ronaldo Guillen È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Gabriel Yuri È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Matheus Garcia Barros È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto DICASF1 È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Juan Martins È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Soto È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rodrigo Forace È da temporada atual.
+[INFO][analysisRequest_html_fill] Piloto Rosemberg Lima È da temporada atual.
+[INFO][update_analysisRequest_show] Calling analysisRequest_html_fill | line.c_str:                     <!--START2-->
+[INFO][analysisRequest_html_fill] Started!
+[INFO][analysisRequest_html_fill] START ==                     <!--START2-->
+[INFO][update_analysisRequest_show] html_out << table_html : concluded.
+[INFO][update_analysisRequest_show] Ended!
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+[INFO][rankingFileDetector] Started!
+[INFO][rankingFileDetector] Inserindo novo arquivo de resultado ao vector.
+[INFO][rankingFileDetector] Novos arquivos de resultado encontrados:
+[INFO][rankingFileDetector] -> ranking_files: T22_E1_240125_005619_R.json
+[INFO][update_backend_table] Started!
+[INFO][update_backend_table] Arquivos recebidos: 1
+[INFO][update_backend_table] to_import_wfile: T22_E1_240125_005619_R.json
+[INFO][import_wfile] Started!
+[INFO][import_wfile] Arquivo do tipo: json | D:\USE\Projects\GIT-Repos\--RPMExpress\x64\Release/results/T22_E1_240125_005619_R.json importado som sucesso.
+[INFO][import_wfile] Ended!
+[INFO][update_backend_table] Arquivo importado com sucesso. (wstring json_full ready)
+[INFO][convertUTF16LEtoUTF8] Started!
+[INFO][convertUTF16LEtoUTF8] wstring convertida para string com sucesso.
+[INFO][convertUTF16LEtoUTF8] Ended!
+[INFO][update_backend_table] Arquivo convertido para string com sucesso. (string file_data ready)
+[INFO][remover_acentuacao] Started!
+[INFO][remover_acentuacao] Ended!
+[INFO][update_backend_table] Arquivo convertido para json com sucesso (json RankingJson ready)
+[INFO][getDetailsByFile] Started!
+[INFO][getDetailsByFile] file_name: T22_E1_240125_005619_R.json
+[INFO][getDetailsByFile] sma.size(): 10
+[INFO][getDetailsByFile] Ended!
+[INFO][update_backend_table] to_search_in_rpm_base: T22 | E1_kyalami_R | id serial PRIMARY KEY, playerId VARCHAR(30), cupCategory INT, raceNumber INT, shortName VARCHAR(4), firstName VARCHAR(30), lastName VARCHAR(30), teamName VARCHAR(30), carModel VARCHAR(25), lapCount INT, bestLap INT, totalTime INT, Punicao_Tempo INT, Punicao_Pontos INT, Punicoes_Adicionais VARCHAR(50), Pontos INT
+[INFO][search_in_rpm_base] Started!
+[INFO][search_in_rpm_base] Received values:
+[INFO][search_in_rpm_base] needed_schema: T22
+[INFO][search_in_rpm_base] needed_table: E1_kyalami_R
+[INFO][search_in_rpm_base] table_query: id serial PRIMARY KEY, playerId VARCHAR(30), cupCategory INT, raceNumber INT, shortName VARCHAR(4), firstName VARCHAR(30), lastName VARCHAR(30), teamName VARCHAR(30), carModel VARCHAR(25), lapCount INT, bestLap INT, totalTime INT, Punicao_Tempo INT, Punicao_Pontos INT, Punicoes_Adicionais VARCHAR(50), Pontos INT
+[INFO][search_in_rpm_base] needed_schema: T22
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][search_in_rpm_base] current_schema[0]: T22
+[INFO][search_in_rpm_base] founded_schema: 1
+[INFO][search_in_rpm_base] Schema T22 encontrado, salvando no map...
+[INFO][search_in_rpm_base] needed_table: E1_kyalami_R
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][search_in_rpm_base] current_table[0]: E1_kyalami_R
+[INFO][search_in_rpm_base] founded_table: 1
+[INFO][search_in_rpm_base] Table E1_kyalami_R encontrado, salvando no map...
+[INFO][verify_existing_content] Started!
+[INFO][verify_existing_content] Preparando Statment (pstmt): SELECT * FROM E1_kyalami_R;
+[INFO][verify_existing_content] Query on Schema: T22 (pstmt): SELECT * FROM: E1_kyalami_R
+[INFO][verify_existing_content] getString(1): 1
+[INFO][verify_existing_content] Existe conte˙do na table: E1_kyalami_R, Schema: T22
+[INFO][update_backend_table] Dados j· existentes. na table: E1_kyalami_R
+[INFO][update_backend_table] Ended!
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][update_frontend_table]                 <!--START1-->
+[INFO][results_html_fill] Started!
+[INFO][results_html_fill] START ==                 <!--START1-->
+[INFO][results_html_fill] current_schema: T22
+[INFO][update_frontend_table] <!--STOP-->
+[INFO][update_frontend_table]                     <!--START2-->
+[INFO][results_html_fill] Started!
+[INFO][results_html_fill] START ==                     <!--START2-->
+[INFO][results_html_fill] tables: 
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][results_html_fill] Entered on regex_search Tabela_Geral
+[INFO][results_html_fill] table: 
+[INFO][results_html_fill] html: 				<option class='table_dropdown' value='T22E1R'>E1 - kyalami</option>
+				<option class='table_dropdown' value='T22Tabela_Geral'>Tabela Geral</option>
+
+[INFO][update_frontend_table] <!--STOP-->
+[INFO][update_frontend_table]         <!--START3-->
+[INFO][results_html_fill] Started!
+[INFO][results_html_fill]         <!--START3-->
+[INFO][results_html_fill] getSchema on: T22
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][results_html_fill] current_table: Tabela_Geral
+[INFO][results_html_fill] Preparando Statment (pstmt): 
+	SELECT COALESCE(cupCategory, 0) as Classe,
+	COALESCE(raceNumber, 0) as Num,
+	COALESCE(shortName, "PLA") as Tag,
+	COALESCE(lastName, "none") as Nome,
+	COALESCE(teamName, "none") as Equipe,
+	COALESCE(carModel, "none") as Modelo,
+	COALESCE(Punicao_Tempo, 0) as Pun_Tempo,
+	COALESCE(Punicao_Pontos, 0) as Pun_Pontos,
+	COALESCE(Punicoes_Adicionais, 0) as Pun_Adicionais,
+	COALESCE(E1B1, 0) as E1B1,
+	COALESCE(E1B2, 0) as E1B2,
+	COALESCE(E2B1, 0) as E2B1,
+	COALESCE(E2B2, 0) as E2B2,
+	COALESCE(E3B1, 0) as E3B1,
+	COALESCE(E3B2, 0) as E3B2,
+	COALESCE(E4B1, 0) as E4B1,
+	COALESCE(E4B2, 0) as E4B2,
+	COALESCE(E5B1, 0) as E5B1,
+	COALESCE(E5B2, 0) as E5B2,
+	COALESCE(TotalPontos, 0) as Pontos
+	FROM T22.Tabela_Geral;
+
+[INFO][update_frontend_table] <!--STOP-->
+[INFO][update_frontend_table]         <!--START4-->
+[INFO][results_html_fill] Started!
+[INFO][results_html_fill]         <!--START4-->
+[INFO][results_html_fill] getSchema on: T22
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][results_html_fill] current_table: E1_kyalami_R
+[INFO][results_html_fill] Ended!
+[INFO][update_frontend_table] <!--STOP-->
+[INFO][update_frontend_table] Arquivo html atualizado com sucesso.
+[INFO][update_geral_ranking] Started!
+[INFO][list_schemas] Started!
+[INFO][list_schemas] Schema list:
+[INFO][list_schemas] Ended!
+[INFO][update_geral_ranking] schema: T22
+[INFO][update_geral_ranking] getSchema on: T22
+[INFO][create_table] Started!
+[INFO][create_table] table_index: playerId VARCHAR(30) PRIMARY KEY, cupCategory INT, raceNumber INT, shortName VARCHAR(4), firstName VARCHAR(30), lastName VARCHAR(30), teamName VARCHAR(30), carModel VARCHAR(25), lapCount INT, bestLap INT, totalTime INT, Punicao_Tempo INT, Punicao_Pontos INT, Punicoes_Adicionais VARCHAR(50), E1B1 INT, E1B2 INT, E2B1 INT, E2B2 INT, E3B1 INT, E3B2 INT, E4B1 INT, E4B2 INT, E5B1 INT, E5B2 INT, TotalPontos INT
+[INFO][create_table] getSchema on: T22
+[INFO][create_table] Created Statement (stmt)
+[INFO][create_table] Created table: Tabela_Geral
+[INFO][create_table] Ended!
+[INFO][update_geral_ranking] Tabela_Geral criada.
+[INFO][list_tables] Started!
+[INFO][list_tables] to_search: T22
+[INFO][list_tables] getSchema on: T22
+[INFO][list_tables] Tablelist:
+[INFO][list_tables] Listagem de tabelas concluida.
+[INFO][list_tables] Ended!
+[INFO][update_geral_ranking] current_table: E1_kyalami_R
+[INFO][update_geral_ranking] Ended!
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+[INFO][rpm_downloader] Started!
+[INFO][PickLink] getString: https://www.dropbox.com/scl/fi/ukwianbpekbsv50h51px9/Customs.7z?rlkey=wruzrd6e6rvka594j6fdwy1n7&dl=1
+[INFO][PickLink] getString: AC Competizione - SKIN-SET (Pacote de skins)
+[INFO][PickLink] getString: Diretorio de instalacao das skins no seu ACC:
+[INFO][PickLink] getString: https://www.dropbox.com/scl/fi/buyezeflfm93323h5q4hp/Daytona24_1_2v.7z?rlkey=et4npzicmgci7j8qcus907cub&dl=1
+[INFO][PickLink] getString: Assetto Corsa - Daytona Pack (LMDH + LMGT3)
+[INFO][PickLink] getString: Diretorio de instalacao do seu Assetto Corsa:
+[INFO][rpm_downloader] DownloaderBase update concluded
+[INFO][waitf] Waiting for function initialize... attempt: 1/10
+[INFO][main] All done! RPM Express Running!
+
+

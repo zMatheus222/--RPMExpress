@@ -15,23 +15,23 @@ mutex queue_mutex;
 //funcao que adiciona a mensagem de envio na fila para ser postada no discord.
 void Discord_Tools::discord_enqueue_message(uint64_t channel_id, const string& message) {
 
-    Exlog(AZUL + __func__, VERDE + "Mensagem sendo adicionada a fila (queue)");
+    Exlog("INFO", AZUL + __func__, VERDE + "Mensagem sendo adicionada a fila (queue)");
 
     //adiciona a mensagem recebida a fila de envio
     message_queue.push({ channel_id, message });
 
-    Exlog(AZUL + __func__, VERDE + "Mensagem enviada com sucesso a fila." + " | channel_id: " + to_string(channel_id) + " | message: " + message);
+    Exlog("INFO", AZUL + __func__, VERDE + "Mensagem enviada com sucesso a fila." + " | channel_id: " + to_string(channel_id) + " | message: " + message);
 }
 
 void Discord_Tools::discord_messenger() {
 
     try {
 
-        Exlog(AZUL + __func__, VERDE + "Started!");
+        Exlog("INFO", AZUL + __func__, VERDE + "Started!");
 
         dpp::cluster bot(DiscordBotToken);
     
-        Exlog(AZUL + __func__, VERDE + "Token: " + CIANO + DiscordBotToken.get<string>());
+        Exlog("INFO", AZUL + __func__, VERDE + "Token: " + CIANO + DiscordBotToken.get<string>());
      
         bot.on_log(dpp::utility::cout_logger());
 
@@ -49,7 +49,7 @@ void Discord_Tools::discord_messenger() {
 
                         pair<uint64_t, string> message = temp_queue.front();
 
-                        Exlog(AZUL + __func__, VERDE + "ID: " + CIANO + to_string(message.first) + VERDE + ", Mensagem: " + CIANO + message.second);
+                        Exlog("INFO", AZUL + __func__, VERDE + "ID: " + CIANO + to_string(message.first) + VERDE + ", Mensagem: " + CIANO + message.second);
 
                     }
 
@@ -68,7 +68,7 @@ void Discord_Tools::discord_messenger() {
                     m.set_channel_id(channel_id);
                     bot.message_create(m);
 
-                    Exlog(AZUL + __func__, VERDE + "Finalizado processo de envio da mensagem.");
+                    Exlog("INFO", AZUL + __func__, VERDE + "Finalizado processo de envio da mensagem.");
 
                 }
                 else {
@@ -78,16 +78,16 @@ void Discord_Tools::discord_messenger() {
                 //verifica a fila de mensagens a cada 2 segundos buscando as mensagens e canais para envio.
                 this_thread::sleep_for(chrono::milliseconds(2000));
 
-                //Exlog(AZUL + __func__, VERDE + "passed sleep_for discord messenger");
+                //Exlog("INFO", AZUL + __func__, VERDE + "passed sleep_for discord messenger");
             
             }
 
-            Exlog(AZUL + __func__, VERDE + "On Loop!");
+            Exlog("INFO", AZUL + __func__, VERDE + "On Loop!");
 
         });
 
 
-        Exlog(AZUL + __func__, VERDE + "--> Discord Messenger Inicializado.");
+        Exlog("INFO", AZUL + __func__, VERDE + "--> Discord Messenger Inicializado.");
 
         Directories::DiscordToolsRoutesOnEnd = true;
 
@@ -96,7 +96,7 @@ void Discord_Tools::discord_messenger() {
 
     }
     catch (const std::exception& e) {
-        Exlog(VERMELHO + __func__, VERDE + "Erro: " + VERMELHO + e.what());
+        Exlog("ERROR", VERMELHO + __func__, VERDE + "Erro: " + VERMELHO + e.what());
     }
 
 }

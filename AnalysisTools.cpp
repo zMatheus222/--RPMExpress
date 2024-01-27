@@ -28,14 +28,14 @@ map<string, string> Analysis_Tools::PickPunishmentBySituation(string& piloto_pun
 	//PUNIÇÕES POR TEMPO - pega o valor e dobra em caso de reincidência
 	if (regex_search(map_punishments["SIPunicoes"], sma, regex("[-+](\\d+)\\sSegundos$"))) {
 
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "Detectada punicao por tempo.");
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "sma[1]: " + CIANO + sma[1].str());
+		Exlog("INFO", "AnalysisRoutes", "Detectada punicao por tempo, sma[1]: " + CIANO + sma[1].str());
 
 		int puni = stoi(sma[1].str());
 
 		//aplicar dobro do valor caso seja reincidencia 
 		(map_punishments["reincidencia"] == "true") ? puni *= 2 : puni *= 1;
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "ByTime::Detectada Reincidencia, Punição por tempo dobrada.");
+		Exlog("INFO", "AnalysisRoutes", "Punicao_Pontos: ByTime::Detectada Reincidencia, Punição por tempo dobrada.");
+
 		map_punishments["Punicao_Pontos"] = "0";
 		map_punishments["Punicao_Tempo"] = to_string(puni);
 		map_punishments["Punicoes_Adicionais"] = "Nenhuma";
@@ -43,14 +43,14 @@ map<string, string> Analysis_Tools::PickPunishmentBySituation(string& piloto_pun
 	//PUNIÇÕES POR PONTOS - pega o valor e dobra em caso de reincidência
 	if (regex_search(map_punishments["SIPunicoes"], sma, regex("[-+](\\d+)\\sPontos$"))) {
 
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "Detectada punicao por pontos.");
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "sma[1]: " + CIANO + sma[1].str());
+		Exlog("INFO", "AnalysisRoutes", "Detectada punicao por pontos, sma[1]: " + CIANO + sma[1].str());
 
 		int puni = stoi(sma[1].str());
 
 		//aplicar dobro do valor caso seja reincidencia 
 		(map_punishments["reincidencia"] == "true") ? puni *= 2 : puni *= 1;
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + " ByPoints::Detectada Reincidencia, Punição por pontos dobrada.");
+
+		Exlog("INFO", "AnalysisRoutes", " ByPoints::Detectada Reincidencia, Punição por pontos dobrada.");
 
 		map_punishments["Punicao_Pontos"] = to_string(puni);
 		map_punishments["Punicao_Tempo"] = "0";
@@ -59,9 +59,7 @@ map<string, string> Analysis_Tools::PickPunishmentBySituation(string& piloto_pun
 	//PUNIÇÕES POR TEMPO E PONTOS
 	if (regex_search(map_punishments["SIPunicoes"], sma, regex("[-+](\\d+)\\sPontos\\s\\&\\s[-+](\\d+)\\sSegundos(?:\\s\\&\\s(\\w+))?$"))) {
 
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "Detectada punicao por tempo e pontos.");
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "sma[1]: " + CIANO + sma[1].str());
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "sma[2]: " + CIANO + sma[2].str());
+		Exlog("INFO", "AnalysisRoutes", "Detectada punicao por tempo e pontos, sma[1]: " + CIANO + sma[1].str() + " sma[2]: " + CIANO + sma[2].str());
 
 		int puni_p = stoi(sma[1].str());
 		int puni_t = stoi(sma[2].str());
@@ -76,14 +74,14 @@ map<string, string> Analysis_Tools::PickPunishmentBySituation(string& piloto_pun
 		map_punishments["Punicao_Tempo"] = to_string(puni_t);
 		map_punishments["Punicao_Pontos"] = to_string(puni_p);
 
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "Detectada Reincidencia, Punição por tempo e pontos dobrada. Punicao adicional: " + map_punishments["Punicoes_Adicionais"]);
+		Exlog("INFO", "AnalysisRoutes", "Detectada Reincidencia, Punição por tempo e pontos dobrada. Punicao adicional: " + map_punishments["Punicoes_Adicionais"]);
 
 	}
 
 	//SEM PUNIÇÃO
 	if (regex_search(map_punishments["SIPunicoes"], sma, regex("Sem Puni..o"))) {
 
-		Exlog("AnalysisRoutes", "CROW_ROUTE", "POST", BRANCO + "Detectada punicao sem punição.");
+		Exlog("INFO", "AnalysisRoutes", "Detectada punicao sem punição.")
 
 		map_punishments["Punicao_Tempo"] = "0";
 		map_punishments["Punicao_Pontos"] = "0";
@@ -246,7 +244,7 @@ map<string,string> Analysis_Tools::PickPunishmentBySituation(json& data) {
 
 void Analysis_Tools::update_analysisRequest_show() {
 	
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	try {
 
@@ -254,7 +252,7 @@ void Analysis_Tools::update_analysisRequest_show() {
 		ifstream show_html(Directories::analysis_request_dir);
 
 		if (!show_html.is_open()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel importar o arquivo html no fstream: show_html: " + Directories::analysis_show_dir);
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel importar o arquivo html no fstream: show_html: " + Directories::analysis_show_dir);
 		}
 
 		//começa salvar todas as linhas do arquivo importado na var, table_html
@@ -267,7 +265,7 @@ void Analysis_Tools::update_analysisRequest_show() {
 
 			if (regex_search(line, regex(".+START[0-9]+.+"))) {
 				//pegamos as informações do banco de dados para criar um codigo html
-				Exlog(AMARELO + __func__, AMARELO + "Calling analysisRequest_html_fill | line.c_str: " + line.c_str());
+				Exlog("INFO", AMARELO + __func__, AMARELO + "Calling analysisRequest_html_fill | line.c_str: " + line.c_str());
 				table_html += MySQL::analysisRequest_html_fill(line.c_str());
 				STOP = true;
 			}
@@ -286,35 +284,33 @@ void Analysis_Tools::update_analysisRequest_show() {
 		ofstream html_out(Directories::analysis_request_after_dir);
 
 		if (!html_out.is_open()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel exportar o arquivo html no fstream: html_out");
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel exportar o arquivo html no fstream: html_out");
 		}
 
 		html_out << table_html;
-		Exlog(AMARELO + __func__, VERDE + "html_out << table_html : concluded.");
+		Exlog("INFO", AMARELO + __func__, VERDE + "html_out << table_html : concluded.");
 
 		html_out.close();
 	}
 	catch (const exception& e) {
 		// Captura exceções do tipo exception (ou suas derivadas)
-		Exlog(AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
 	}
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
 }
 
 void Analysis_Tools::update_analysis_show() {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	try {
 
 		//Mapear em AnalysisBase apenas Schemas e Tables que possuem a tabela de analises ja criadas.
 		map<string, string> AnalysisBase;
 
-		vector<string> schemas = list_schemas(regex(RegexSeason));
-
-		for (const auto& current_schema : schemas) {
+		for (const auto& current_schema : list_schemas(regex(RegexSeason))) {
 
 			vector<string> tables = list_tables(current_schema, regex(AnalysisDefaultTable.get<string>()));
 
@@ -325,15 +321,15 @@ void Analysis_Tools::update_analysis_show() {
 		}
 
 		if (AnalysisBase.empty()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Nenhum dado foi coletado no loop for, AnalysisBase");
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nenhum dado foi coletado no loop for, AnalysisBase");
 		}
 
-		Exlog(AMARELO + __func__, VERDE + "Passed first for...");
+		Exlog("INFO", AMARELO + __func__, VERDE + "Passed first for...");
 
 		//primeiro importamos um pedaço do html + o css completo
 		ifstream show_html(Directories::analysis_show_dir);
 		if (!show_html.is_open()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel importar o arquivo html no fstream: show_html: " + Directories::analysis_show_dir);
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel importar o arquivo html no fstream: show_html: " + Directories::analysis_show_dir);
 		}
 
 		//começa salvar todas as linhas do arquivo importado na var, table_html
@@ -346,7 +342,7 @@ void Analysis_Tools::update_analysis_show() {
 			
 			if (regex_search(line, regex(".+START[0-9]+.+"))) {
 				//pegamos as informações do banco de dados para criar um codigo html
-				Exlog(AMARELO + __func__, AMARELO + "Calling analysis_html_fill | line.c_str: " + line.c_str());
+				Exlog("INFO", AMARELO + __func__, AMARELO + "Calling analysis_html_fill | line.c_str: " + line.c_str());
 				table_html += MySQL::analysis_html_fill(AnalysisBase, line.c_str());
 				STOP = true;
 			}
@@ -364,20 +360,20 @@ void Analysis_Tools::update_analysis_show() {
 
 		ofstream html_out(Directories::analysis_show_after_dir);
 		if (!html_out.is_open()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel exportar o arquivo html no fstream: html_out");
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel exportar o arquivo html no fstream: html_out");
 		}
 
 		html_out << table_html;
-		Exlog(AMARELO + __func__, VERDE + "html_out << table_html : concluded.");	
+		Exlog("INFO", AMARELO + __func__, VERDE + "html_out << table_html : concluded.");	
 
 		html_out.close();
 	}
 	catch (const exception& e) {
 		// Captura exceções do tipo exception (ou suas derivadas)
-		Exlog(AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
 	}
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
 }
 

@@ -11,7 +11,7 @@ using namespace TXT_Style;
 using namespace std;
 
 // Inicialização das variáveis estáticas de Diretories.
-string Directories::base_dir; string Directories::templates_dir; string Directories::static_dir; string Directories::const_dir; string Directories::results_dir; string Directories::operator_auth_dir; string Directories::championship_configs_dir; string Directories::analysis_request_dir; string Directories::analysis_request_after_dir; string Directories::analysis_show_dir; string Directories::analysis_show_after_dir; string Directories::operator_menu_dir; string Directories::table_dir; string Directories::table_after_dir; json Directories::operator_auth; json Directories::championship_configs;
+string Directories::base_dir; string Directories::templates_dir; string Directories::static_dir; string Directories::const_dir; string Directories::results_dir; string Directories::operator_auth_dir; string Directories::championship_configs_dir; string Directories::analysis_request_dir; string Directories::analysis_request_after_dir; string Directories::analysis_show_dir; string Directories::analysis_show_after_dir; string Directories::operator_menu_dir; string Directories::table_dir; string Directories::table_after_dir; string Directories::log_files_dir; json Directories::operator_auth; json Directories::championship_configs;
 
 mutex df_mutex; 
 
@@ -26,7 +26,7 @@ bool Directories::RPMDownloaderOnEnd = false;
 
 void Directories::Initialize() {
 
-	Exlog(AMARELO + __FUNCTION__, StartMsg);
+	Exlog("INFO", AMARELO + __FUNCTION__, StartMsg);
 
 	char buffer[MAX_PATH];
 	GetModuleFileNameA(NULL, buffer, MAX_PATH);
@@ -55,18 +55,16 @@ void Directories::Initialize() {
 	table_after_dir = exedir + "/templates/table_after.html";
 	results_dir = exedir + "/results";
 
-	// Exibe o caminho do diretório
-	Exlog(AMARELO + __FUNCTION__, "base_dir: " + base_dir);
+	log_files_dir = exedir + "/logs";
 
-	Exlog(AMARELO + __FUNCTION__, EndMsg);
+	// Exibe o caminho do diretório
+	Exlog("INFO", AMARELO + __FUNCTION__, "base_dir: " + base_dir);
+
+	Exlog("INFO", AMARELO + __FUNCTION__, EndMsg);
 
 }
 
 vector<string> Directories::list_files(const char* path, bool ignore_folders) {
-
-	//Exlog(AMARELO + __func__, StartMsg);
-
-	//Exlog(AMARELO + __func__, "path: " + CIANO + string(path));
 
 	//retorna a lista de arquivos de algum diretório.
 
@@ -87,7 +85,7 @@ vector<string> Directories::list_files(const char* path, bool ignore_folders) {
 		}
 	}
 	else {
-		Exlog(AMARELO + __func__, VERMELHO + "O caminho fornecido nao e um diretorio valido.");
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "O caminho fornecido nao e um diretorio valido.");
 	}
 
 	//Exlog(AMARELO + __func__, EndMsg);
@@ -100,7 +98,7 @@ pair<string,json> Directories::import_file(const string& file_path) {
 
 	lock_guard<mutex> lock(df_mutex);
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	int buffer_size;
 	string string_export;
@@ -114,18 +112,18 @@ pair<string,json> Directories::import_file(const string& file_path) {
 		smatch sma;
 		if (regex_search(file_path, sma, regex(".+\\.(.+)"))) {
 
-			Exlog(AMARELO + __func__, "Arquivo do tipo: " + string(sma[1]) + " | " + file_path + " importado som sucesso.");
+			Exlog("INFO", AMARELO + __func__, "Arquivo do tipo: " + string(sma[1]) + " | " + file_path + " importado som sucesso.");
 			file_type = sma[1];
 		}
 		else {
 
-			Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel identificar o tipo do arquivo: " + file_path);
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel identificar o tipo do arquivo: " + file_path);
 		}
 
 		ifstream imp_file(file_path);
 
 		if (!imp_file.is_open()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Falha ao importar o arquivo. file_path: " + file_path);
+			Exlog("ERROR", AMARELO + __func__, VERMELHO + "Falha ao importar o arquivo. file_path: " + file_path);
 		}
 
 		//se o arquivo for json fazer o parse.
@@ -133,12 +131,10 @@ pair<string,json> Directories::import_file(const string& file_path) {
 
 			try {
 				// Usar um istringstream para fazer o parse do JSON
-				//istringstream iss(string_export);
-				//iss >> json_file;
 				imp_file >> json_file;
 			}
 			catch (const json::parse_error& e) {
-				Exlog(AMARELO + __func__, VERMELHO + "Erro ao tentar fazer o Parse do JSON: " + e.what());
+				Exlog("ERROR", AMARELO + __func__, VERMELHO + "Erro ao tentar fazer o Parse do JSON: " + e.what());
 			}
 		}
 		else {
@@ -149,31 +145,31 @@ pair<string,json> Directories::import_file(const string& file_path) {
 			buffer_size = string_export.size();
 		}
 
-		Exlog(AMARELO + __func__, "Criando par de dados para retorno.");
+		Exlog("INFO", AMARELO + __func__, "Criando par de dados para retorno.");
 
 		//criar um par para o retorno, um deles será vazio, o outro terá o conteudo (dependendo o que for passado na função)
 		pair<string, json> data = make_pair(string_export, json_file);
 
 		imp_file.close();
 
-		Exlog(AMARELO + __func__, EndMsg);
+		Exlog("INFO", AMARELO + __func__, EndMsg);
 
 		return data;
 	}
 	catch (const exception& e) {
 
-		Exlog(AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
 		// Trate a exceção ou adicione mais informações ao log
 
 		// Mostrar o conteúdo e o tamanho da variável 'buffer'
-		Exlog(AMARELO + __func__, "Conteudo da variavel 'buffer': " + string_export);
-		Exlog(AMARELO + __func__, "Tamanho da variável 'buffer': " + to_string(buffer_size) + " bytes");
+		Exlog("ERROR", AMARELO + __func__, "Conteudo da variavel 'buffer': " + string_export);
+		Exlog("ERROR", AMARELO + __func__, "Tamanho da variável 'buffer': " + to_string(buffer_size) + " bytes");
 	}
 }
 
 wstring Directories::import_wfile(const string& file_path) {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	int buffer_size;
 	wstring string_export;
@@ -186,18 +182,18 @@ wstring Directories::import_wfile(const string& file_path) {
 		smatch sma;
 		if (regex_search(file_path, sma, regex(".+\\.(.+)"))) {
 
-			Exlog(AMARELO + __func__, "Arquivo do tipo: " + string(sma[1]) + " | " + file_path + " importado som sucesso.");
+			Exlog("INFO", AMARELO + __func__, "Arquivo do tipo: " + string(sma[1]) + " | " + file_path + " importado som sucesso.");
 			file_type = sma[1];
 		}
 		else {
 
-			Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel identificar o tipo do arquivo: " + file_path);
+			Exlog("INFO", AMARELO + __func__, VERMELHO + "Nao foi possivel identificar o tipo do arquivo: " + file_path);
 		}
 
 		wifstream imp_file(file_path);
 
 		if (!imp_file.is_open()) {
-			Exlog(AMARELO + __func__, VERMELHO + "Falha ao importar o arquivo. file_path: " + file_path);
+			Exlog("INFO", AMARELO + __func__, VERMELHO + "Falha ao importar o arquivo. file_path: " + file_path);
 		}
 
 		wstring line;
@@ -209,49 +205,51 @@ wstring Directories::import_wfile(const string& file_path) {
 
 		imp_file.close();
 
-		Exlog(AMARELO + __func__, EndMsg);
+		Exlog("INFO", AMARELO + __func__, EndMsg);
 
 		return string_export;
 	}
 	catch (const exception& e) {
 
-		Exlog(AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
+		Exlog("ERROR", AMARELO + __func__, VERMELHO + "Erro durante a chamada (catch): " + e.what());
 		// Trate a exceção ou adicione mais informações ao log
 
 		// Mostrar o conteúdo e o tamanho da variável 'buffer'
-		Exlog(AMARELO + __func__, "Tamanho da variável 'buffer': " + to_string(buffer_size) + " bytes");
+		Exlog("ERROR", AMARELO + __func__, "Tamanho da variável 'buffer': " + to_string(buffer_size) + " bytes");
 	}
 }
 
+/*
 void export_file(string* file_data, const string& file_name) {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	ofstream exp_file(Directories::results_dir + "/converted/teste.json");
-	Exlog(AMARELO + __func__, VERDE + "Arquivo corrigido e exportado para: " + Directories::results_dir + "/converted/teste.json");
+	Exlog("INFO", AMARELO + __func__, VERDE + "Arquivo corrigido e exportado para: " + Directories::results_dir + "/converted/teste.json");
 
 	exp_file << *file_data;
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
 }
+*/
 
 map<string, string> Directories::search_in_rpm_base(string needed_schema, string needed_table, string table_query) {
 
 	//lock_guard<mutex> lock(mysql_mutex);
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
-	Exlog(AMARELO + __func__, "Received values:");
-	Exlog(AMARELO + __func__, "needed_schema: " + needed_schema);
-	Exlog(AMARELO + __func__, "needed_table: " + needed_table);
-	Exlog(AMARELO + __func__, "table_query: " + table_query);
+	Exlog("INFO", AMARELO + __func__, "Received values:");
+	Exlog("INFO", AMARELO + __func__, "needed_schema: " + needed_schema);
+	Exlog("INFO", AMARELO + __func__, "needed_table: " + needed_table);
+	Exlog("INFO", AMARELO + __func__, "table_query: " + table_query);
 
 	map<string, string> SchemaTable;
 	bool founded_schema = false;
 	bool founded_table = false;
 
-	Exlog(AMARELO + __func__, "needed_schema: " + needed_schema);
+	Exlog("INFO", AMARELO + __func__, "needed_schema: " + needed_schema);
 
 	//se a string de needed_schema que foi passada não for "none", realizar os procedimentos de schema.
 	if (needed_schema != "none") {
@@ -262,22 +260,22 @@ map<string, string> Directories::search_in_rpm_base(string needed_schema, string
 			//procurar na lista de schemas o que a gente precisa
 			vector<string> current_schema = MySQL::list_schemas(regex(needed_schema));
 
-			Exlog(AMARELO + __func__, "current_schema[" + to_string(current_schema.size() - 1) + "]: " + current_schema[current_schema.size() - 1]);
+			Exlog("INFO", AMARELO + __func__, "current_schema[" + to_string(current_schema.size() - 1) + "]: " + current_schema[current_schema.size() - 1]);
 
 			//detectar se encontramos ou não o schema
 			((current_schema[current_schema.size() - 1] != "none") && (current_schema.size() < 2)) ? founded_schema = true : founded_schema = false;
 
-			Exlog(AMARELO + __func__, "founded_schema: " + to_string(founded_schema));
+			Exlog("INFO", AMARELO + __func__, "founded_schema: " + to_string(founded_schema));
 
 			//se não encontramos o schema, criar ele e adicionar o numero de tentativas.
 			
 			if (founded_schema) {
-				Exlog(AMARELO + __func__,  VERDE + "Schema " + needed_schema + " encontrado, salvando no map...");
+				Exlog("INFO", AMARELO + __func__,  VERDE + "Schema " + needed_schema + " encontrado, salvando no map...");
 				SchemaTable["Schema"] = current_schema[current_schema.size() - 1];
 			}
 			else {
 
-				Exlog(AMARELO + __func__, AMARELO + "Schema " + needed_schema + " nao encontrado, Chamando funcao create_schema...");
+				Exlog("INFO", AMARELO + __func__, AMARELO + "Schema " + needed_schema + " nao encontrado, Chamando funcao create_schema...");
 				
 				MySQL::create_schema(needed_schema);
 				founded_schema = true;
@@ -285,7 +283,7 @@ map<string, string> Directories::search_in_rpm_base(string needed_schema, string
 				attempts++;
 
 				if (attempts >= 5) {
-					Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel criar o schema, erro critico.");
+					Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel criar o schema, erro critico.");
 					this_thread::sleep_for(chrono::seconds(1));
 					break;
 				}
@@ -295,7 +293,7 @@ map<string, string> Directories::search_in_rpm_base(string needed_schema, string
 
 	}
 
-	Exlog(AMARELO + __func__, "needed_table: " + needed_table);
+	Exlog("INFO", AMARELO + __func__, "needed_table: " + needed_table);
 
 	if (needed_table != "none") {
 
@@ -305,20 +303,20 @@ map<string, string> Directories::search_in_rpm_base(string needed_schema, string
 			//procurar na lista de tables o que a gente precisa
 			vector<string> current_table = MySQL::list_tables(needed_schema, regex(needed_table));
 
-			Exlog(AMARELO + __func__, "current_table[" + to_string(current_table.size() - 1) + "]: " + current_table[current_table.size() - 1]);
+			Exlog("INFO", AMARELO + __func__, "current_table[" + to_string(current_table.size() - 1) + "]: " + current_table[current_table.size() - 1]);
 			          
 			//detectar se encontramos ou não a table
 			(regex_search(current_table[current_table.size() -1], regex(needed_table))) ? founded_table = true : founded_table = false;
-			Exlog(AMARELO + __func__, "founded_table: " + to_string(founded_table));
+			Exlog("INFO", AMARELO + __func__, "founded_table: " + to_string(founded_table));
 
 			//se não encontramos a table, criar ele e adicionar o numero de tentativas.|
 			if (founded_table) {
-				Exlog(AMARELO + __func__, VERDE + "Table " + needed_table + " encontrado, salvando no map...");
+				Exlog("INFO", AMARELO + __func__, VERDE + "Table " + needed_table + " encontrado, salvando no map...");
 				SchemaTable["Table"] = current_table[current_table.size() - 1];
 			}
 			else {
 
-				Exlog(AMARELO + __func__, AMARELO + "Table " + needed_table + " nao encontrado, Chamando funcao create_table...");
+				Exlog("INFO", AMARELO + __func__, AMARELO + "Table " + needed_table + " nao encontrado, Chamando funcao create_table...");
 
 				MySQL::create_table(needed_schema, needed_table, false, table_query);
 				founded_table = true;
@@ -326,7 +324,7 @@ map<string, string> Directories::search_in_rpm_base(string needed_schema, string
 				attempts++;
 
 				if (attempts >= 5) {
-					Exlog(AMARELO + __func__, VERMELHO + "Nao foi possivel criar o table, erro critico.");
+					Exlog("ERROR", AMARELO + __func__, VERMELHO + "Nao foi possivel criar o table, erro critico.");
 					this_thread::sleep_for(chrono::seconds(1));
 					break;
 				}
@@ -342,12 +340,12 @@ map<string, string> Directories::search_in_rpm_base(string needed_schema, string
 
 string validate_link(string& link) {
 
-	Exlog(AMARELO + __func__, StartMsg);
+	Exlog("INFO", AMARELO + __func__, StartMsg);
 
 	string received_url = link;
 
 	if (regex_search(received_url, regex("([A-Za-z0-9]+\\:\\/\\/)(\\w+.){3}\\/.+"))) {
-		Exlog(AMARELO + __func__, "Received a valid url");
+		Exlog("INFO", AMARELO + __func__, "Received a valid url");
 		return received_url;
 	}
 
@@ -355,7 +353,7 @@ string validate_link(string& link) {
 
 	if (regex_search(received_url, capgroup, regex("(www.)?((?:\\w+.)+)"))) {
 
-		Exlog(AMARELO + __func__, "Received a invalid url: " + received_url);
+		Exlog("INFO", AMARELO + __func__, "Received a invalid url: " + received_url);
 
 		if (capgroup[1] == "www.") {
 			received_url = "https://" + received_url;
@@ -368,46 +366,62 @@ string validate_link(string& link) {
 
 	}
 
-	Exlog(AMARELO + __func__, EndMsg);
+	Exlog("INFO", AMARELO + __func__, EndMsg);
 
 	return received_url;
 
 }
 
-void Exlog(string function, string message) {
+void ExportLogs(const string& logn, string& log_data) {
+
+	string export_dir = Directories::log_files_dir + "/exlog_" + logn + ".log";
+
+	ofstream log_file(export_dir, ios::app);
+
+	if (!log_file.is_open()) {
+		Exlog("ERROR", VERMELHO + __func__, "***Falha ao exportar o arquivo de log. log_type: " + logn + "***\n");
+	}
+
+	log_file << log_data;
+
+	log_file.close();
+
+}
+
+void Exlog(string log_type, string function, string message) {
 
 	if (Debug_Logs == "true") {
 
-		if ((regex_search(function, regex(Exlog_Shows))) || (regex_match(string(Exlog_Shows), regex("All")))) {
+		string formatted_color_msg = NEGRITO + BRANCO + "[" + log_type + "][" + function + BRANCO + "] " + PADRAO + message + ENDS;
+		string simple_msg = "[" + log_type + "][" + function + "] " + message + "\n";
 
-			if (Exlog_Colors == "true") {
-				cout << NEGRITO << BRANCO << "[" << function << BRANCO << "] " << PADRAO << message << ENDS;
-			}
-			else {
-				cout << "[" << function << "] " << message << endl;
-			}
+		if ((regex_search(function, regex(Exlog_Shows))) || (regex_match(string(Exlog_Shows), regex("All")))) {
+			(Exlog_Colors == "true") ? cout << formatted_color_msg : cout << simple_msg;
 		}
+
+		if (File_Logs == "true") ExportLogs("27_01_2024", simple_msg);
+
 	}
 }
 
-void Exlog(const char* function, const char* service, const char* route_type, const char* message) {
+/*
+void Exlog(string log_type, const char* function, const char* service, const char* route_type, const char* message) {
 
 	if (Debug_Logs == "true") {
 
+		string formatted_color_msg = NEGRITO + BRANCO + "[" + PRETO + function + PADRAO + BRANCO + "::" + MAGENTA + service + BRANCO + "::" + CIANO + route_type + NEGRITO + BRANCO + "] " + PADRAO + BRANCO + message + ENDS;
+		string simple_msg = "[" + string(function) + "::" + service + "::" + route_type + "] " + string(message) + "\n";
+
 		if ((regex_search(function, regex(Exlog_Shows))) || (regex_match(string(Exlog_Shows), regex("All")))) {
-
-			if (Exlog_Colors == "true") {
-				cout << NEGRITO << BRANCO << "[" << PRETO << function << PADRAO << BRANCO << "::" << MAGENTA << service << BRANCO << "::" << CIANO << route_type << NEGRITO << BRANCO << "] " << PADRAO << BRANCO << message << ENDS;
-			}
-			else {
-				cout << "[" << function << "::" << service << "::" << route_type << "] " << message << endl;
-			}
-
+			(Exlog_Colors == "true") ? cout << formatted_color_msg : cout << simple_msg;
 		}
+
+		if (File_Logs == "true") ExportLogs("27_01_2024", simple_msg);
 	}
 }
 
-void Exlog(const char* function, const char* service, const char* route_type, string message) {
+
+void Exlog(string log_type, const char* function, const char* service, const char* route_type, string message) {
 
 	if (Debug_Logs == "true") {
 
@@ -423,3 +437,4 @@ void Exlog(const char* function, const char* service, const char* route_type, st
 		}
 	}	
 }
+*/

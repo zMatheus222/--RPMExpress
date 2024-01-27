@@ -82,6 +82,7 @@ public:
 	static std::string static_dir;
 	static std::string const_dir;
 	static std::string results_dir;
+	static std::string log_files_dir;
 
 	static std::string operator_auth_dir;
 	static std::string championship_configs_dir;
@@ -114,6 +115,7 @@ public:
 };
 
 #define Debug_Logs Directories::operator_auth["Debug_Logs"]
+#define File_Logs Directories::operator_auth["File_Logs"]
 #define Exlog_Shows Directories::operator_auth["Exlog_Shows"]
 #define Exlog_Colors Directories::operator_auth["Exlog_Colors"]
 
@@ -240,9 +242,9 @@ ON DUPLICATE KEY UPDATE
 
 std::string validate_link(std::string& link);
 
-void Exlog(std::string function, std::string message);
-void Exlog(const char* function, const char* service, const char* route_type, const char* message);
-void Exlog(const char* function, const char* service, const char* route_type, std::string message);
+void Exlog(std::string log_type, std::string function, std::string message);
+//void Exlog(std::string log_type, const char* function, const char* service, const char* route_type, const char* message);
+//void Exlog(const char* function, const char* service, const char* route_type, std::string message);
 
 void rpm_downloader();
 extern std::string DownloaderBase;

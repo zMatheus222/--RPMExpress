@@ -12,6 +12,7 @@
 		"AA_Alert_ChannelID" : 1174861636864057374
 	},
 	"Debug_Logs": "true",
+	"File_Logs": "true",
 	"Exlog_Shows" : "All",
 	"Exlog_Colors": "false"
 }

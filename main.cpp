@@ -16,7 +16,7 @@ void waitf(int max_attemps, bool& function) {
 	do {
 
 		this_thread::sleep_for(chrono::seconds(2));
-		Exlog(AMARELO + __func__, VERDE + "Waiting for function initialize... attempt: " + to_string(loopc) + "/" + to_string(max_attemps));
+		Exlog("INFO", AMARELO + __func__, VERDE + "Waiting for function initialize... attempt: " + to_string(loopc) + "/" + to_string(max_attemps));
 		loopc++;
 		if (loopc > max_attemps) break;
 
@@ -44,7 +44,7 @@ int main(){
 	MySQL::Connect(mysql_auth.getMySQLAuth()["server"], mysql_auth.getMySQLAuth()["username"], mysql_auth.getMySQLAuth()["password"]);
 
 	Directories::registerAllDrivers();
-	Exlog(AMARELO + __func__, VERDE + "All drivers registered!");
+	Exlog("INFO", AMARELO + __func__, VERDE + "All drivers registered!");
 
 	//Iniciar o serviço do bot do discord
 	thread Thread_01(Discord_Tools::discord_messenger);
@@ -67,14 +67,14 @@ int main(){
 	waitf(10, Directories::RPMDownloaderOnEnd);
 
 	cout << "\n\n";
-	Exlog(AMARELO + __func__, MAGENTA + "All done! RPM Express Running!\n\n");
+	Exlog("INFO", AMARELO + __func__, MAGENTA + "All done! RPM Express Running!\n\n");
 
 	Thread_01.join(); Thread_02.join();
 	Thread_03.join(); Thread_04.join();
 
 	cout << "\n\n";
 
-	Exlog(AMARELO + __func__, VERMELHO + "RPM Express Finalizado!\n\n");
+	Exlog("INFO", AMARELO + __func__, VERMELHO + "RPM Express Finalizado!\n\n");
 
 	system("pause");
 

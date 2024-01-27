@@ -15,7 +15,7 @@ const char* MySQL::PickLink(const char* data, string dataColumn) {
 
         if (result->next()) {
             link = result->getString(dataColumn);
-            Exlog(AZUL + __func__, VERDE + "getString: " + link);
+            Exlog("INFO", AZUL + __func__, VERDE + "getString: " + link);
         }
         else {
             cout << "Nenhum resultado encontrado." << endl;
@@ -29,9 +29,9 @@ const char* MySQL::PickLink(const char* data, string dataColumn) {
         return link_c;
     }
     catch (sql::SQLException& e) {
-        Exlog(VERMELHO + __func__, VERMELHO + e.what());
+        Exlog("ERROR", VERMELHO + __func__, VERMELHO + e.what());
         //Exlog(VERMELHO + __func__, VERMELHO + e.getErrorCode());
-        Exlog(VERMELHO + __func__, VERMELHO + e.getSQLState());
+        Exlog("ERROR", VERMELHO + __func__, VERMELHO + e.getSQLState());
 	}   
 
     return "ERROR::<><>";

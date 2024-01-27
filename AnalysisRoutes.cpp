@@ -189,7 +189,7 @@ void Analysis_Tools::AnalysisRoutes() {
 		string piloto_punido{ "none" }; string etapa{ "none" }; string bateria{ "none" }; string situacaoPrincipal{ "" }; string situacaoIntrinseca{ "" }; bool reincidencia{ false };
 
 		//coletar os dados do indice campo_temp recebido no javascript
-		string campo_temp = data["campo_temp"].s(); Exlog(AMARELO + __func__, "json::campo_temp: " + campo_temp);
+		string campo_temp = data["campo_temp"].s(); Exlog("INFO", AMARELO + __func__, "json::campo_temp: " + campo_temp);
 
 		//dividir os dados de campo temp (temporada / etapa / bateria)
 		smatch sma;
@@ -208,14 +208,14 @@ void Analysis_Tools::AnalysisRoutes() {
 		reincidencia = data["reincidencia"].b();
 
 		cout << "\n\nsma\n\n";
-		Exlog(AMARELO + __func__, "piloto_punido: " + piloto_punido);
-		Exlog(AMARELO + __func__, "json::sma[1]: " + temporada);
-		Exlog(AMARELO + __func__, "json::sma[2]: " + etapa);
-		Exlog(AMARELO + __func__, "json::sma[3]: " + bateria);
+		Exlog("INFO", AMARELO + __func__, "piloto_punido: " + piloto_punido);
+		Exlog("INFO", AMARELO + __func__, "json::sma[1]: " + temporada);
+		Exlog("INFO", AMARELO + __func__, "json::sma[2]: " + etapa);
+		Exlog("INFO", AMARELO + __func__, "json::sma[3]: " + bateria);
 
 
 		cout << "\n\nExlog::x\n\n";
-		Exlog(AMARELO + __func__, "json::situacaoPrincipal: " + situacaoPrincipal); Exlog(AMARELO + __func__, "json::situacaoIntrinseca: " + situacaoIntrinseca); Exlog(AMARELO + __func__, "json::reincidencia: " + to_string(reincidencia));
+		Exlog("INFO", AMARELO + __func__, "json::situacaoPrincipal: " + situacaoPrincipal); Exlog("INFO", AMARELO + __func__, "json::situacaoIntrinseca: " + situacaoIntrinseca); Exlog("INFO", AMARELO + __func__, "json::reincidencia: " + to_string(reincidencia));
 		
 		//Monta o par com etapa e bateria coletados no regex_search
 		pair<int,int> etapa_bateria = make_pair(stoi(etapa), stoi(bateria));
@@ -309,7 +309,7 @@ void Analysis_Tools::AnalysisRoutes() {
 	//executar todas as rotas crow
 	AnalysisApp.port(8085).run();
 
-	Exlog(AMARELO + __func__, VERMELHO + ">>>> Crow Route - AnalysisApp finalizado. <<<<");
+	Exlog("ERROR", AMARELO + __func__, VERMELHO + ">>>> Crow Route - AnalysisApp finalizado. <<<<");
 	system("pause");
 	
 }

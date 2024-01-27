@@ -8,7 +8,7 @@ std::string DownloaderBase;
 
 void rpm_downloader() {
 
-   Exlog(AZUL + __func__, VERDE + "Started!");
+   Exlog("INFO", AZUL + __func__, VERDE + "Started!");
 
    DownloaderBase += string("ACC-SKINSET: ") + MySQL::PickLink("ACC-SKINSET", "direct_download_link") + "\n";
    DownloaderBase += string("ACC-SKINSET-TITLE: ") + MySQL::PickLink("ACC-SKINSET", "item_title") + "\n";
@@ -18,7 +18,7 @@ void rpm_downloader() {
    DownloaderBase += string("AC1-EVENT-TITLE: ") + MySQL::PickLink("AC1-EVENT-MODPACK", "item_title") + "\n";
    DownloaderBase += string("AC1-EVENT-DESCRIPTION: ") + MySQL::PickLink("AC1-EVENT-MODPACK", "item_description");
 
-   Exlog(AZUL + __func__, VERDE + "DownloaderBase update concluded");
+   Exlog("INFO", AZUL + __func__, VERDE + "DownloaderBase update concluded");
 
    Directories::RPMDownloaderOnEnd = true;
 
